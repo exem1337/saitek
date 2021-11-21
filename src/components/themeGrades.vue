@@ -1,18 +1,18 @@
 <template>
     <div class="container">
-        <h3 class="teal-text">Оценки студентов по теме {{ course.courseThemeName }}</h3>
-        <button @click="sortByGroup" class="waves-effect waves-light btn"><i class="material-icons left">sort</i>Отсортировать по группам</button>
-            <ul class="collection" style="width: 100%">
-                <li v-for="student in course.students" :key="student.studentID" class="collection-item avatar userCard">
-                    <img src="https://11m1a41kw68b2skba3uj53p1-wpengine.netdna-ssl.com/wp-content/uploads/2019/04/avatar-male.jpg" alt="" class="circle">
-                    <span class="title">{{student.studentLastName}} {{student.studentName}} {{student.studentPatronim}}</span>
-                    <p>Группа {{student.studentGroup}} <br>
-                        Дата последнего тестирования: {{student.studenPassTime}} 
-                    </p>
-                    <a href="#!" class="secondary-content valign-wrapper"><i class="material-icons">grade</i>Оценка: {{ student.studentGrade }}/100 </a>
-                </li>
-            </ul>
-    </div> 
+        <h3 class="grey-text text-darken-2 headText z-depth-3">Оценки студентов по теме {{ course.courseThemeName }}</h3>
+        <ul class="collection z-depth-3 white" style="width: 100%; margin-top:0">
+            <li class="white" style="margin: 15px"><button @click="sortByGroup" class="waves-effect waves-light btn amber darken-4"><i class="material-icons left">sort</i>Отсортировать по группам</button></li>
+            <li v-for="student in course.students" :key="student.studentID" class="collection-item avatar userCard">
+                <img src="https://11m1a41kw68b2skba3uj53p1-wpengine.netdna-ssl.com/wp-content/uploads/2019/04/avatar-male.jpg" alt="" class="circle">
+                <span class="title">{{student.studentLastName}} {{student.studentName}} {{student.studentPatronim}}</span>
+                <p>Группа {{student.studentGroup}} <br>
+                    Дата последнего тестирования: {{student.studenPassTime}}
+                </p>
+                <a href="#!" class="secondary-content valign-wrapper amber-text text-darken-4"><i class="material-icons amber-text text-darken-4">grade</i>Оценка: {{ student.studentGrade }}/100 </a>
+            </li>
+        </ul>
+    </div>
 </template>
 
 <script>
@@ -21,7 +21,7 @@
             return {
                 course: {
                     courseThemeName: "Тема 1",
-                    students: 
+                    students:
                     [
                         {
                             studentID: 1,
@@ -105,5 +105,27 @@
         &:hover {
             background-color: darken(#fff, 10%) !important;
         }
+    }
+    .headText{
+        position: relative;
+        z-index: 1;
+        width: fit-content;
+        background-color: #fff;
+        padding: 15px;
+        margin-top: 15px;
+        margin-bottom: 0;
+        border-radius: 20px 20px 0 0 ;
+    }
+    .btn-wrapper{
+        display: flex;
+        .white-space{
+            width: 100%;
+            position: relative;
+            z-index: 2;
+        }
+    }
+    .collection{
+        position: relative;
+        z-index: 1;
     }
 </style>

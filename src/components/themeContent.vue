@@ -7,7 +7,7 @@
 <script>
 //import changeColor from '../js/hoverColor.js'
 export default {
-    
+
 }
 </script>
 
@@ -15,9 +15,13 @@ export default {
 .content-text{
     background-color: #fff;
     overflow-y: scroll;
-    height: 89%;
+    height: 94%;
     margin: 10px;
-    border-radius: 20px;
+    margin-top: 0;
+    margin-left: 0;
+    transform: translateY(-15px);
+
+    border-radius: 0 0 10px 10px;
     padding: 15px;
 }
 .spotlight2 {

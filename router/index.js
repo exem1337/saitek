@@ -8,6 +8,8 @@ import profile from '../src/components/profile.vue';
 import courses from '../src/components/courses.vue';
 import courseEditor from '../src/components/editCourse.vue'
 import themeGrades from '../src/components/themeGrades.vue'
+import adminSettings from '../src/components/adminSettings'
+import editRule from '../src/components/editRule'
 
 const routes = [
     {
@@ -43,6 +45,16 @@ const routes = [
         path: "/themeGrades",
         name: "themeGrades",
         component: themeGrades
+    },
+    {
+        path: "/adminSettings",
+        name: "adminSettings",
+        component: adminSettings
+    },
+    {
+        path: "/editRule",
+        name: "editRule",
+        component: editRule
     }
 ];
 

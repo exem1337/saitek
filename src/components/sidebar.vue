@@ -1,15 +1,15 @@
 <template>
     <aside class="sidebar z-depth-3">
-    <h3>Главы</h3>
+    <h3 class="themes">Главы</h3>
     <nav>
         <ul>
           <li v-for="theme in themes" v-bind:key="theme.key" style="cursor: pointer;">{{ theme.name }}</li>
         </ul>
     </nav>
     </aside>
-      
+
     <div class="fixed-action-btn toggle-menu">
-        <a class="btn-floating btn-large teal darken-1">
+        <a class="btn-floating btn-large amber darken-4">
           <i class="large material-icons">list</i>
         </a>
     </div>
@@ -75,8 +75,9 @@ h1 {
 }
 
 .sidebar {
-  border-radius: 20px;
+  border-radius: 0 20px 20px 0px;
   margin: 10px;
+  margin-left: 0;
   width: 7000px;
   background-color: #fff;
   left: 0;
@@ -147,8 +148,8 @@ nav ul li {
   line-height: 20px;
 }
 nav ul li.active {
-  border-color: #00695c;
-  color: #00796b;
+  border-color: #ff6f00;
+  color: #ff6f00;
 }
 
 @media all and (max-width: 1024px) {

@@ -1,6 +1,7 @@
 <template>
     <div class="container">
-        <div class="card horizontal" style="padding: 15px">
+        <h3 class="grey-text text-darken-2 headText z-depth-1">Редактирование курса</h3>
+        <div class="card horizontal edit" style="padding: 15px">
             <form style="width:100%">
                 <div class="row" style="margin-bottom: 0">
                     <div class="input-field col s12 m12 l6">
@@ -14,12 +15,12 @@
                         <!-- <label for="course_description">Описание курса</label> -->
                     </div>
                 </div>
-                <button @submit.prevent="saveChanges" class="waves-effect waves-light btn "><i class="material-icons left">cloud</i>Сохранить изменения</button>
+                <button @submit.prevent="saveChanges" class="waves-effect waves-light btn amber darken-4"><i class="material-icons left">cloud</i>Сохранить изменения</button>
                 <ul>
                     <li v-for="theme in course.courseThemes" :key="theme.themeID">
-                        <div class="card blue-grey darken-1 waves-effect" style="width:100%">
-                            <div class="card-content white-text">
-                                <span class="card-title">{{theme.name}} Сложность: {{ getDifficuiltyName(theme.difficuilty) }}</span>
+                        <div class="card amber lighten-2 waves-effect" style="width:100%">
+                            <div class="card-content grey-text text-darken-2" style="font-weight: 600;">
+                                <span class="card-title" style="font-weight: 600;">{{theme.name}} Сложность: {{ getDifficuiltyName(theme.difficuilty) }}</span>
                                 <p>I am a very simple card. I am good at containing small bits of information.
                                     I am convenient because I require little markup to use effectively.</p>
                                 <router-link to="/themeGrades"><i v-if="$store.state.userType === 2 || $store.state.userType === 1" class="material-icons edit-icon tooltipped" data-position="top" data-tooltip="Оценки">person</i></router-link>
@@ -42,7 +43,7 @@ export default {
                 courseID: 1,
                 courseName: "Основы программирования на языке C++",
                 courseDescription: "Это курс по c++",
-                courseThemes: 
+                courseThemes:
                 [
                     {
                         name: "Тема 1",
@@ -120,3 +121,48 @@ export default {
 
 }
 </script>
+
+<style lang="scss" scoped>
+.headText{
+        position: relative;
+        z-index: 1;
+        width: fit-content;
+        background-color: #fff;
+        padding: 15px;
+        margin-top: 15px;
+        margin-bottom: 0;
+        border-radius: 20px 20px 0 0 ;
+    }
+@mixin icons-stack {
+        position: absolute;
+        top: 5px;
+        color: #fff;
+        transition: color .2s ease;
+
+        &:hover {
+            color: darken(#ff6f00, 5%) !important;
+        }
+    }
+
+    .edit-icon{
+        @include icons-stack;
+        right: 5px;
+    }
+    .stats-icon{
+        @include icons-stack;
+        right: 35px;
+    }
+    .test-icon{
+        @include icons-stack;
+        right: 65px;
+    }
+    textarea:focus {
+        border-bottom: 1px solid #ff6f00 !important;
+        box-shadow: 0 1px 0 0 #ff6f00 !important;
+    }
+    .edit{
+        position: relative;
+        z-index: 2;
+        margin-top: 0;
+    }
+</style>

@@ -1,12 +1,11 @@
 <template>
     <div class="container">
-        <h3 class="text-darken-2">Дисциплины</h3>
-        <div class="card horizontal" style="padding: 15px">
-            <ul style="width:100%">
-                <li v-for="course in courses" :key="course"> 
-                    <div class="card blue-grey darken-1 waves-effect" style="width:100%">
-                        <div class="card-content white-text course-card">
-                            <span class="card-title">{{course}}</span>
+        <h3 class="grey-text text-darken-2 headText z-depth-3">Дисциплины</h3>
+            <ul style="width:100%; margin-top:0">
+                <li v-for="course in courses" :key="course">
+                    <div class="card amber darken-2 waves-effect z-depth-3" style="width:100%">
+                        <div class="card-content grey-text text-lighten-3 course-card" style="font-weight: 500">
+                            <span class="card-title" style="font-weight: 500">{{course}}</span>
                             <p>I am a very simple card. I am good at containing small bits of information.
                                 I am convenient because I require little markup to use effectively.</p>
                             <router-link to="/courseEdit"><i v-if="$store.state.userType === 2 || $store.state.userType === 1" class="material-icons edit-icon tooltipped" data-position="top" data-tooltip="Редактировать курс">edit</i></router-link>
@@ -15,7 +14,6 @@
                     </div>
                 </li>
             </ul>
-        </div>      
     </div>
 </template>
 
@@ -40,7 +38,7 @@ export default {
         transition: color .2s ease;
 
         &:hover {
-            color: lightblue
+            color: darken(#ff6f00, 5%) !important;
         }
     }
 
@@ -59,7 +57,26 @@ export default {
     .course-card{
         transition: background-color .2s ease;
         &:hover{
-            background-color: darken(#546e7a ,10%) !important;
+            background-color: lighten(#ff6f00 ,10%) !important;
         }
+        &:first-child{
+            margin-top: 0;
+        }
+        position: relative !important;
+        z-index: 2;
+    }
+    .card:first-child {
+        margin-top: 0;
+        border-radius: 0 15px 0 0;
+    }
+    .headText{
+        position: relative;
+        z-index: 1;
+        width: fit-content;
+        background-color: #fff;
+        padding: 15px;
+        margin-top: 15px;
+        margin-bottom: 0;
+        border-radius: 20px 20px 0 0 ;
     }
 </style>

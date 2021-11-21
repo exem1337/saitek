@@ -1,29 +1,21 @@
 <template>
     <div class="container">
-        <div class="row">
-            <div class="col s12">
-                <h5 class="right" style="margin-right:20px;">Мой профиль</h5>          
+        <h3 class="grey-text text-darken-2 headText z-depth-3">Мой профиль</h3>
+        <div class="card horizontal profile-info z-depth-3">
+            <div class="image-wrapper">
+                <img class="avatar" src ="https://11m1a41kw68b2skba3uj53p1-wpengine.netdna-ssl.com/wp-content/uploads/2019/04/avatar-male.jpg">
+                <img class="img-top" src="https://lh3.googleusercontent.com/EbXw8rOdYxOGdXEFjgNP8lh-YAuUxwhOAe2jhrz3sgqvPeMac6a6tHvT35V6YMbyNvkZL4R_a2hcYBrtfUhLvhf-N2X3OB9cvH4uMw=w1064-v0" alt="">
             </div>
-        </div>
-        <div class="row">
-            <div class="col s12">
-                <div class="card horizontal profile-info">
-                    <div class="image-wrapper">
-                        <img class="avatar" src ="https://11m1a41kw68b2skba3uj53p1-wpengine.netdna-ssl.com/wp-content/uploads/2019/04/avatar-male.jpg">
-                        <img class="img-top" src="https://lh3.googleusercontent.com/EbXw8rOdYxOGdXEFjgNP8lh-YAuUxwhOAe2jhrz3sgqvPeMac6a6tHvT35V6YMbyNvkZL4R_a2hcYBrtfUhLvhf-N2X3OB9cvH4uMw=w1064-v0" alt="">
-                    </div>
-                    <div class="profile-content">
-                        <div class="profile-content-inner">
-                            <p class="userName flow-text">Фамилия: <span class="data">{{this.user.surname}}</span></p>
-                            <p class="userName flow-text">Имя: <span class="data">{{this.user.name}}</span></p>
-                            <p class="userName flow-text">Отчество: <span class="data">{{this.user.patronim}}</span></p>
-                        </div>
-                        <div class="profile-content-inner">
-                            <p class="userName flow-text">Факультет: <span class="data">{{this.user.Faculty}}</span></p>
-                            <p class="userName flow-text">Курс: <span class="data">{{this.user.Course}}</span></p>
-                            <p class="userName flow-text">Группа: <span class="data">{{this.user.Group}}</span></p>
-                        </div>
-                    </div>
+            <div class="profile-content">
+                <div class="profile-content-inner">
+                    <p class="userName flow-text">Фамилия: <span class="data">{{this.user.surname}}</span></p>
+                    <p class="userName flow-text">Имя: <span class="data">{{this.user.name}}</span></p>
+                    <p class="userName flow-text">Отчество: <span class="data">{{this.user.patronim}}</span></p>
+                </div>
+                <div class="profile-content-inner">
+                    <p class="userName flow-text">Факультет: <span class="data">{{this.user.Faculty}}</span></p>
+                    <p class="userName flow-text">Курс: <span class="data">{{this.user.Course}}</span></p>
+                    <p class="userName flow-text">Группа: <span class="data">{{this.user.Group}}</span></p>
                 </div>
             </div>
         </div>
@@ -55,7 +47,7 @@ export default {
         }
     },
     components: {
-        
+
     }
 }
 </script>
@@ -87,7 +79,7 @@ export default {
 
     .userData{
         p{
-            margin-top: 10px;   
+            margin-top: 10px;
         }
     }
 
@@ -97,7 +89,7 @@ export default {
 
     .data{
         color: #424242;
-    } 
+    }
 
     .profile-info{
         display: flex;
@@ -127,5 +119,11 @@ export default {
 
     .image-wrapper:hover .img-top {
         display: inline;
+    }
+
+    .card{
+        margin-top: 0;
+        position: relative;
+        z-index: 2;
     }
 </style>

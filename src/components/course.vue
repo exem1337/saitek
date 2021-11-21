@@ -1,18 +1,17 @@
 <template>
-    <header/>
-        <div class="theme-inner">
-            <sidebar/>
-            <div class="content flow-text">
-                <div class="theme-name z-depth-2 spotlight">
-                    <p>Дисциплина: Основы программирования на языке C++ Тема: Тема 1 - Введение в C++</p>
-                    <ul class="pagination">
-                        <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
-                        <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
-                    </ul>
-                </div>
-                <themeContent/>
+    <div class="theme-inner">
+        <sidebar/>
+        <div class="content flow-text">
+            <div class="theme-name spotlight z-depth-2">
+                <p class="white-text">Дисциплина: Основы программирования на языке C++ <br> Тема: Тема 1 - Введение в C++</p>
+                <ul class="pagination">
+                    <li class="disabled amber darken-4"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
+                    <li class="waves-effect amber darken-4"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
+                </ul>
             </div>
+            <themeContent/>
         </div>
+    </div>
 </template>
 
 <script>
@@ -56,15 +55,17 @@ export default {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    //background-color: rgb(161, 160, 160);
-    border-radius: 10px;
-    margin-top: 10px;
-    margin-left: 10px;
+    background-color: #4f2fa9 !important;
+    border-radius: 0px 0 20px 20px;
+    position: relative;
+    z-index: 2;
+    margin-left: 0px;
     margin-right: 10px;
     padding: 0px 40px;
     transition: .5s;
     height: 10%;
-    background-color: #fff;
+    background-color: transparent;
+    transition: .5s all;
 }
 .pagination {
     width: 120px !important;

@@ -19,17 +19,17 @@
                             <div class="row">
                                 <div class="col s12">
                                     <label>
-                                        <input type="checkbox" id="rememberMe" class="filled-in" />
+                                        <input type="checkbox" id="rememberMe" class="filled-in checkbox-blue-grey" />
                                         <span>Запомнить меня</span>
                                     </label>
                                 </div>
                             </div>
                             <div class="row">
-                                <router-link to="course"><input type="submit" id="loginBtn" value="Войти" @click="login" class="waves-effect waves-light btn white-text" style="margin-left:10px; color: #fff; !important"></router-link>
+                                <router-link to="course"><input type="submit" id="loginBtn" value="Войти" @click="login" class="waves-effect waves-light btn white-text amber darken-4" style="margin-left:10px; color: #fff; !important"></router-link>
                                 <a href="#" @click="startRegistering" class="waves-effect waves-light grey-text text-darken-2 btn register_btn">Зарегистрироваться</a>
                             </div>
                         </form>
-                        
+
                         <form v-if="this.register === true" action="">
                             <div class="row">
                                 <div class="container">
@@ -112,11 +112,11 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <router-link to="course"><input type="submit" @click="login" value="Завершить регистрацию" class="waves-effect waves-light btn" style="margin-left:10px;"></router-link>
+                                <router-link to="course"><input type="submit" @click="login" value="Завершить регистрацию" class="waves-effect waves-light btn amber darken-4" style="margin-left:10px;"></router-link>
                             </div>
                         </form>
 
-                        
+
                         <form v-if="this.register && this.teacher" action="" v-on:submit.prevent="onSubmit">
                             <div class="row">
                                 <div class="input-field col s12 m4 l4">
@@ -148,7 +148,7 @@
                                     <option value="ASF">АСФ</option>
                                     <option value="EF">ЭФ</option>
                                     </select>
-                                  
+
                                 </div>
                                 <div class="input-field col s12 m4 l4">
                                     <select class="browser-default">
@@ -176,13 +176,13 @@
                                 </label> -->
                                 </div>
                                 <div class="col s12 m6 l6">
-                                <label for="files" class="waves-effect waves-light btn white-text" style="cursor:pointer; margin-top:30px">Прикрепить трудовой договор</label>
-                                <input id="files" type="file" style="visibility:hidden;" class="waves-effect waves-light btn"/> 
+                                <label for="files" class="waves-effect waves-light btn white-text amber darken-4" style="cursor:pointer; margin-top:30px">Прикрепить трудовой договор</label>
+                                <input id="files" type="file" style="visibility:hidden;" class="waves-effect waves-light btn"/>
                                 </div>
-                                
+
                             </div>
                             <div class="row">
-                                <router-link to="course"><input type="submit" value="Завершить регистрацию" @click="login" class="waves-effect waves-light btn" style="margin-left:10px;"></router-link>
+                                <router-link to="course"><input type="submit" value="Завершить регистрацию" @click="login" class="waves-effect waves-light btn amber darken-4" style="margin-left:10px;"></router-link>
                             </div>
                         </form>
                     </div>
@@ -226,12 +226,24 @@ export default {
 </script>
 
 <style lang="scss">
+    [type="radio"]:checked + span::after,
+    [type="radio"].with-gap:checked + span::before,
+    [type="radio"].with-gap:checked + span::after {
+        border: 2px solid #ff6f00;
+    }
+
+    [type="radio"]:checked + span::after,
+    [type="radio"].with-gap:checked + span::after {
+        background-color: #ff6f00;
+    }
+
     .register_btn{
         margin-left: 10px;
         transition: .2s ease;
         background-color: #fff;
         &:hover{
             color:#fff !important;
+            background-color: #ff6f00 !important;
         }
     }
     ::-webkit-file-upload-button {
@@ -239,5 +251,48 @@ export default {
         background: black;
         color: red;
         padding: 1em;
+    }
+
+      /* label color */
+    .input-field label {
+        color: #000 !important;
+    }
+    /* label focus color */
+    .input-field input[type=text]:focus + label {
+        color: #000 !important;
+    }
+    /* label underline focus color */
+    .input-field input[type=text]:focus {
+        border-bottom: 1px solid #ff6f00 !important;
+        box-shadow: 0 1px 0 0 #ff6f00 !important;
+    }
+
+    .checkbox-blue-grey[type="checkbox"].filled-in:checked+span:not(.lever):after {
+        border: 2px solid #ff6f00;
+        background-color: #ff6f00;
+    }
+
+    .input-field input[type=password]:focus {
+        border-bottom: 1px solid #ff6f00 !important;
+        box-shadow: 0 1px 0 0 #ff6f00 !important;
+    }
+    input[type=checkbox]:checked {
+        background-color: #ff6f00 !important;
+        color: #ff6f00 !important;
+        box-shadow: 0 1px 0 0 #ff6f00 !important;
+    }
+    /* valid color */
+    .input-field input[type=text].valid {
+        border-bottom: 1px solid #000 !important;
+        box-shadow: 0 1px 0 0 #000 !important;
+    }
+    /* invalid color */
+    .input-field input[type=text].invalid {
+        border-bottom: 1px solid #000;
+        box-shadow: 0 1px 0 0 #000;
+    }
+    /* icon prefix focus color */
+    .input-field .prefix.active {
+        color: #000;
     }
 </style>

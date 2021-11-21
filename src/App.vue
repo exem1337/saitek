@@ -1,7 +1,9 @@
 <template>
-  <div class="bg-image"></div>
+  <!-- <div class="bg-image"></div> -->
   <app-header/>
+   <!-- <transition name="bounce"> -->
   <router-view></router-view>
+  <!-- </transition> -->
 </template>
 
 <script>
@@ -21,15 +23,15 @@ export default {
 }
 </script>
 
-    
+
 <style lang="scss">
-  
-  
+
+
   body{
-    background-color: #fafafa ;
-    
+    background-color: #f3ebe2 ;
+
     .bg-image{
-        background-image: url('../src/img/bg.png');
+        //background-image: url('../src/img/bg.png');
         position: absolute;
         top: 0;
         left: 0;
@@ -41,7 +43,7 @@ export default {
         transition: 1000ms linear all;
     }
   }
-  
+
 // ::-webkit-scrollbar {
 //   width: .5em;
 // }
@@ -49,7 +51,7 @@ export default {
 // ::-webkit-scrollbar-track {
 //     margin: 0 30px;
 // }
- 
+
 // ::-webkit-scrollbar-thumb {
 //   background-color: darkgrey;
 //   transition: .3s ease;
@@ -61,7 +63,7 @@ export default {
 //   //outline: 1px solid slategrey;
 
 //   border-radius: 5px;
-  
+
 //   // background: red;
 //   // border-right: 4px white solid;
 //   // background-clip: padding-box;
@@ -104,4 +106,24 @@ export default {
 ::-webkit-scrollbar-corner {
     background-color: transparent;
 }
+
+.bounce-enter-active {
+  animation: bounce-in 0.5s;
+}
+.bounce-leave-active {
+  animation: bounce-in 0.5s reverse;
+}
+@keyframes bounce-in {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.25);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+
 </style>
