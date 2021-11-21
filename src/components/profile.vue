@@ -19,22 +19,32 @@
                 </div>
             </div>
         </div>
+
+        <div class="card horizontal rulesContainer z-depth-3">
+            <h4 class="white-text text-darken-2" style="font-weight: 500; font-size: 3em;">Статистика по дисциплинам</h4>
+            <ul>
+                <li v-for="stat in this.stats" :key="stat.key">
+                    <div class="discipline">
+                        <h4 style="margin-bottom: 15px;">{{stat.discName}}</h4>
+                        <h3 class="progress-label">{{stat.percentage}}%</h3>
+                        <div class="progress">
+                            <div class="determinate bar" :style="{width: stat.percentage + '%'}"></div>
+                        </div>
+                    </div>
+
+                </li>
+            </ul>
+
+            <i class="material-icons cardIcon">fingerprint</i>
+        </div>
+
     </div>
 </template>
 
 <script>
-import PieChart from '../components/PieChart';
 export default {
-    components: {
-        PieChart,
-    },
     data() {
         return {
-            pieData: [
-                { color: "#0B6487", value: 30 },
-                { color: "#9D1F37", value: 40 },
-                { color: "#F6931C", value: 30 }
-            ],
             user: {
                 name: 'Данила',
                 surname: 'Акладский',
@@ -43,16 +53,102 @@ export default {
                 Faculty: 'ФМИТ',
                 Course: '2',
                 Group: '19ИВТ(б)-ПОВТ'
-            }
-        }
-    },
-    components: {
+            },
+            stats:
+            [
+                {
+                    discName: "Основы программирования на языке C++",
+                    percentage: 75,
+                    key: 0
+                },
+                {
+                    discName: "Основы программирования на языке C++",
+                    percentage: 25,
+                    key: 1
+                },
+                {
+                    discName: "Основы программирования на языке C++",
+                    percentage: 45,
+                    key: 2
+                },
+                {
+                    discName: "Основы программирования на языке C++",
+                    percentage: 100,
+                    key: 3
+                },
+                {
+                    discName: "Основы программирования на языке C++",
+                    percentage: 50,
+                    key: 4
+                },
+            ]
 
+        }
     }
 }
 </script>
 
 <style lang="scss" scoped>
+    ul:last-child > li > .discipline{
+        margin-bottom: 0;
+    }
+
+    .progress-label{
+        position: absolute;
+        right: 30px;
+        top: -10px;
+        color:#4f2fa9;
+        font-weight: 700;
+        opacity: 15%;
+        transition: opacity .3s ease;
+    }
+
+    .discipline{
+        height: fit-content;
+        padding: 10px;
+        background: color #ffa000;
+        border-radius: 15px;
+        margin-bottom: 15px;
+        position: relative;
+        z-index: 2;
+        transition: transform .3s ease;
+        background-color: #ffa000;
+        &:hover {
+            transform: scale(101%);
+        }
+        &:hover > .progress-label {
+            opacity: 30%;
+        }
+        h4 {
+            font-weight: 500;
+            color: #fff;
+        }
+    }
+
+    .rulesContainer{
+        overflow: hidden;
+        margin-top: 0;
+        position: relative;
+        z-index: 1 !important;
+        display: flex;
+        transform: translateY(-20px);
+        flex-direction: column;
+        padding: 20px;
+        transition: transform .2s ease;
+        h4{
+            margin: 0;
+        }
+        background-color: lighten(#4f2fa9, 20%);
+    }
+
+    .bar{
+        background-color: lighten(#4f2fa9, 20%);
+    }
+
+    .progress  {
+        background-color: lighten(#ffa000, 20%);
+    }
+
     .avatar{
         // max-width: 200px !important;
         border-radius: 50% !important;
@@ -95,6 +191,9 @@ export default {
         display: flex;
         flex-direction: row;
         padding: 10px;
+        position: relative;
+
+        border-radius: 0 10px 10px 10px;
     }
 
     .profile-content{

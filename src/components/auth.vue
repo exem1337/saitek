@@ -25,7 +25,7 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <router-link to="course"><input type="submit" id="loginBtn" value="Войти" @click="login" class="waves-effect waves-light btn white-text amber darken-4" style="margin-left:10px; color: #fff; !important"></router-link>
+                                <router-link to="courses"><input type="submit" id="loginBtn" value="Войти" @click="login" class="waves-effect waves-light btn white-text amber darken-2" style="margin-left:10px; color: #fff; !important"></router-link>
                                 <a href="#" @click="startRegistering" class="waves-effect waves-light grey-text text-darken-2 btn register_btn">Зарегистрироваться</a>
                             </div>
                         </form>
@@ -112,7 +112,7 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <router-link to="course"><input type="submit" @click="login" value="Завершить регистрацию" class="waves-effect waves-light btn amber darken-4" style="margin-left:10px;"></router-link>
+                                <router-link to="courses"><input type="submit" @click="login" value="Завершить регистрацию" class="waves-effect waves-light btn amber darken-2" style="margin-left:10px;"></router-link>
                             </div>
                         </form>
 
@@ -176,13 +176,13 @@
                                 </label> -->
                                 </div>
                                 <div class="col s12 m6 l6">
-                                <label for="files" class="waves-effect waves-light btn white-text amber darken-4" style="cursor:pointer; margin-top:30px">Прикрепить трудовой договор</label>
+                                <label for="files" class="waves-effect waves-light btn white-text amber darken-2" style="cursor:pointer; margin-top:30px">Прикрепить трудовой договор</label>
                                 <input id="files" type="file" style="visibility:hidden;" class="waves-effect waves-light btn"/>
                                 </div>
 
                             </div>
                             <div class="row">
-                                <router-link to="course"><input type="submit" value="Завершить регистрацию" @click="login" class="waves-effect waves-light btn amber darken-4" style="margin-left:10px;"></router-link>
+                                <router-link to="courses"><input type="submit" value="Завершить регистрацию" @click="login" class="waves-effect waves-light btn amber darken-2" style="margin-left:10px;"></router-link>
                             </div>
                         </form>
                     </div>
@@ -243,7 +243,7 @@ export default {
         background-color: #fff;
         &:hover{
             color:#fff !important;
-            background-color: #ff6f00 !important;
+            background-color: #ffa000 !important;
         }
     }
     ::-webkit-file-upload-button {

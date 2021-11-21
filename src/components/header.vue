@@ -9,7 +9,7 @@
                 <li v-if="$store.state.logged"><router-link to="courses" class="white-text text-darken-4">Курсы</router-link></li>
                 <li v-if="$store.state.logged" @click="bgtransform"><router-link to="/profile" class="white-text text-darken-4">Мой профиль</router-link></li>
                 <li v-if="$store.state.userType === 2"><router-link to="/adminSettings" class="white-text text-darken-4">Настройка</router-link></li>
-                <li>Справка</li>
+                <li><router-link to="/about" class="white-text text-darken-4">Справка</router-link></li>
                 <li v-if="$store.state.logged"><router-link to="/" @click="logout" class="white-text text-darken-4">Выход</router-link></li>
               </ul>
             </div>

@@ -10,6 +10,7 @@ import courseEditor from '../src/components/editCourse.vue'
 import themeGrades from '../src/components/themeGrades.vue'
 import adminSettings from '../src/components/adminSettings'
 import editRule from '../src/components/editRule'
+import about from '../src/components/about'
 
 const routes = [
     {
@@ -55,6 +56,11 @@ const routes = [
         path: "/editRule",
         name: "editRule",
         component: editRule
+    },
+    {
+        path: "/about",
+        name: "about",
+        component: about
     }
 ];
 

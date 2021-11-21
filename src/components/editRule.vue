@@ -8,20 +8,20 @@
                     <label for="last_name">Стрессоустойчивость</label>
                 </div>
                 <div class="input-field">
-                    <input id="last_name" type="text" class="validate" value="12">
-                    <label for="last_name">Стрессоустойчивость</label>
+                    <input id="lasst_name" type="text" class="validate" value="12">
+                    <label for="lasst_name">Стрессоустойчивость</label>
                 </div>
                 <div class="input-field">
-                    <input id="last_name" type="text" class="validate" value="12">
-                    <label for="last_name">Стрессоустойчивость</label>
+                    <input id="lastt_name" type="text" class="validate" value="12">
+                    <label for="lastt_name">Стрессоустойчивость</label>
                 </div>
                 <div class="input-field">
-                    <input id="last_name" type="text" class="validate" value="12">
-                    <label for="last_name">Стрессоустойчивость</label>
+                    <input id="lasta_name" type="text" class="validate" value="12">
+                    <label for="lasta_name">Стрессоустойчивость</label>
                 </div>
                 <div class="input-field">
-                    <input id="last_name" type="text" class="validate" value="12">
-                    <label for="last_name">Стрессоустойчивость</label>
+                    <input id="lastq_name" type="text" class="validate" value="12">
+                    <label for="lastq_name">Стрессоустойчивость</label>
                 </div>
             </div>
             <i class="material-icons">arrow_forward</i>

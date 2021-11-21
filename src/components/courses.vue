@@ -2,7 +2,8 @@
     <div class="container">
         <h3 class="grey-text text-darken-2 headText z-depth-3">Дисциплины</h3>
             <ul style="width:100%; margin-top:0">
-                <li v-for="course in courses" :key="course">
+                <li class="myCourse" v-for="course in courses" :key="course">
+                    <router-link to="/course">
                     <div class="card amber darken-2 waves-effect z-depth-3" style="width:100%">
                         <div class="card-content grey-text text-lighten-3 course-card" style="font-weight: 500">
                             <span class="card-title" style="font-weight: 500">{{course}}</span>
@@ -11,7 +12,9 @@
                             <router-link to="/courseEdit"><i v-if="$store.state.userType === 2 || $store.state.userType === 1" class="material-icons edit-icon tooltipped" data-position="top" data-tooltip="Редактировать курс">edit</i></router-link>
                             <router-link to="/courseEdit"><i v-if="$store.state.userType === 2 || $store.state.userType === 1" class="material-icons stats-icon tooltipped" data-position="top" data-tooltip="Статистика курса">view_list</i></router-link>
                         </div>
+                        <i class="material-icons cardIcon">memory</i>
                     </div>
+                    </router-link>
                 </li>
             </ul>
     </div>
@@ -31,6 +34,16 @@ export default {
 </script>
 
 <style lang="scss">
+     .cardIcon{
+        position: absolute;
+        bottom: -400px;
+        right: -300px;
+        font-size: 50em;
+        opacity: 5%;
+        transform: rotateZ(45deg);
+        overflow: hidden;
+    }
+
     @mixin icons-stack {
         position: absolute;
         top: 5px;
@@ -54,11 +67,17 @@ export default {
         @include icons-stack;
         right: 65px;
     }
+    .myCourse{
+         &:hover{
+            transform: scale(101%);
+        }
+        position: relative;
+        z-index: 2;
+        transition: transform .3s ease;
+    }
     .course-card{
         transition: background-color .2s ease;
-        &:hover{
-            background-color: lighten(#ff6f00 ,10%) !important;
-        }
+
         &:first-child{
             margin-top: 0;
         }

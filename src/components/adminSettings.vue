@@ -10,11 +10,11 @@
                 </li>
                 <li @click="editShow" class="rule addRule z-depth-2 grey-text waves-effect text-lighten-2 white"><i class="material-icons myIconAdd">add</i></li>
             </ul>
-            <i class="material-icons cardIcon">dialpad</i>
+            <i class="material-icons cardIcon">fingerprint</i>
         </div>
         <div class="card horizontal trassirovka z-depth-3">
             <h4 class="white-text text-darken-2" style="font-weight: 500; font-size: 3em">Трассировка</h4>
-            <i class="material-icons cardIcon">dialpad</i>
+            <i class="material-icons cardIcon">library_books</i>
         </div>
     </div>
     <transition name="bounce">
@@ -118,17 +118,6 @@ export default {
         opacity: 30%;
         animation-play-state: paused;
     }
-
-    .cardIcon{
-        position: absolute;
-        bottom: -400px;
-        right: -300px;
-        font-size: 50em;
-        opacity: 5%;
-        transform: rotateZ(45deg);
-        overflow: hidden;
-    }
-
     .addRule{
         display: flex;
         align-items: center;

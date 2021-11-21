@@ -4,6 +4,7 @@
    <!-- <transition name="bounce"> -->
   <router-view></router-view>
   <!-- </transition> -->
+  <!-- <i class="material-icons bgicon icon1">filter_none</i> -->
 </template>
 
 <script>
@@ -25,7 +26,16 @@ export default {
 
 
 <style lang="scss">
+  .bgicon{
+    font-size: 25em;
+    opacity: 3%;
 
+    .icon1 {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
 
   body{
     background-color: #f3ebe2 ;
