@@ -1,8 +1,8 @@
 <template>
   <div class="container">
-    <p>{{ questions.name }}</p>
+    <p>{{ questions.Heading }}</p>
     <form action="#" @submit.prevent="getAnswer">
-      <p v-for="question in questions.vars" :key="question.key">
+      <p v-for="question in questions.Answer" :key="question.Key">
         <label>
           <input
             name="group1"
@@ -10,7 +10,7 @@
             :value="question.isCorrect"
             v-model="answer"
           />
-          <span>{{ question.text }}</span>
+          <span>{{ question.Text }}</span>
         </label>
       </p>
       <input type="submit" />
