@@ -3,7 +3,7 @@
     <div class="card z-depth-2 test-template">
       <h4>Тема 1, сложность - средний</h4>
       <test-question
-        v-if="!results"
+        v-if="!results && testReady"
         @onAnswer="onAnswer"
         :questions="question[i]"
       />
@@ -27,6 +27,7 @@ export default {
     let i = ref(0);
     let results = ref(false);
     let correctCount = ref(0);
+    let testReady = ref(false)
     // const question = [
     //   {
     //     name: "вопрос 1",
@@ -68,6 +69,7 @@ export default {
         }
         question = res
         console.log(res);
+        testReady.value = true
       });
     });
 
@@ -80,7 +82,7 @@ export default {
       } else results.value = true;
     };
 
-    return { question, i, onAnswer, results, correctCount };
+    return { question, i, onAnswer, results, correctCount, testReady };
   },
 };
 </script>

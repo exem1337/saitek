@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <p>{{ questions.Heading }}</p>
+    <p>{{ questions.Header }}</p>
     <form action="#" @submit.prevent="getAnswer">
       <p v-for="question in questions.Answer" :key="question.Key">
         <label>
