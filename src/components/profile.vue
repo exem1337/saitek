@@ -18,13 +18,14 @@
                     <p class="userName flow-text">Группа: <span class="data">{{this.user.Group}}</span></p>
                 </div>
             </div>
+            <i class="material-icons cardIcon id">perm_identity</i>
         </div>
 
         <div class="card horizontal rulesContainer z-depth-3">
             <h4 class="white-text text-darken-2" style="font-weight: 500; font-size: 3em;">Статистика по дисциплинам</h4>
             <ul>
                 <li v-for="stat in this.stats" :key="stat.key">
-                    <div class="discipline">
+                    <div class="discipline z-depth-2">
                         <h4 style="margin-bottom: 15px;">{{stat.discName}}</h4>
                         <h3 class="progress-label">{{stat.percentage}}%</h3>
                         <div class="progress">
@@ -89,6 +90,17 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+    .id{
+        transform: rotateZ(0deg) !important;
+        font-size: 25em;
+        top: 10px;
+        right: -40px;
+        width: fit-content;
+        height: fit-content;
+        filter: blur(10px);
+
+    }
+
     ul:last-child > li > .discipline{
         margin-bottom: 0;
     }
@@ -97,22 +109,21 @@ export default {
         position: absolute;
         right: 30px;
         top: -10px;
-        color:#4f2fa9;
+        color:#000;
         font-weight: 700;
-        opacity: 15%;
+        opacity: 25%;
         transition: opacity .3s ease;
     }
 
     .discipline{
         height: fit-content;
         padding: 10px;
-        background: color #ffa000;
         border-radius: 15px;
         margin-bottom: 15px;
         position: relative;
         z-index: 2;
         transition: transform .3s ease;
-        background-color: #ffa000;
+        background-color: #2f79ee;
         &:hover {
             transform: scale(101%);
         }
@@ -138,15 +149,15 @@ export default {
         h4{
             margin: 0;
         }
-        background-color: lighten(#4f2fa9, 20%);
+        background-color: lighten(#2f79ee, 20%);
     }
 
     .bar{
-        background-color: lighten(#4f2fa9, 20%);
+        background-color: darken(#2f79ee, 15%);
     }
 
     .progress  {
-        background-color: lighten(#ffa000, 20%);
+        background-color: lighten(#2acc72, 20%);
     }
 
     .avatar{
@@ -167,6 +178,7 @@ export default {
         z-index: 99;
         opacity: 0.7;
         transition: opacity .5s ease;
+
     }
 
     .names{
@@ -180,7 +192,8 @@ export default {
     }
 
     .userName{
-        color: teal;
+        color: #2f79ee;
+        font-weight: 500;
     }
 
     .data{
@@ -194,6 +207,8 @@ export default {
         position: relative;
 
         border-radius: 0 10px 10px 10px;
+
+        overflow: hidden;
     }
 
     .profile-content{

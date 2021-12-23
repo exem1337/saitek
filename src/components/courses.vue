@@ -4,8 +4,8 @@
             <ul style="width:100%; margin-top:0">
                 <li class="myCourse" v-for="course in courses" :key="course">
                     <router-link to="/course">
-                    <div class="card amber darken-2 waves-effect z-depth-3" style="width:100%">
-                        <div class="card-content grey-text text-lighten-3 course-card" style="font-weight: 500">
+                    <div class="card waves-effect z-depth-3 discipline" style="width:100%">
+                        <div class="card-content grey-text text-darken-2 course-card" style="font-weight: 500">
                             <span class="card-title" style="font-weight: 500">{{course}}</span>
                             <p>I am a very simple card. I am good at containing small bits of information.
                                 I am convenient because I require little markup to use effectively.</p>
@@ -34,24 +34,31 @@ export default {
 </script>
 
 <style lang="scss">
-     .cardIcon{
+    .cardIcon{
         position: absolute;
         bottom: -400px;
         right: -300px;
         font-size: 50em;
-        opacity: 5%;
+        opacity: 10%;
         transform: rotateZ(45deg);
         overflow: hidden;
+        -webkit-touch-callout: none; /* iOS Safari */
+        -webkit-user-select: none;   /* Chrome/Safari/Opera */
+        -khtml-user-select: none;    /* Konqueror */
+        -moz-user-select: none;      /* Firefox */
+        -ms-user-select: none;       /* Internet Explorer/Edge */
+        user-select: none;
+     
     }
 
     @mixin icons-stack {
         position: absolute;
         top: 5px;
-        color: #fff;
+        color: darken(grey, 10%);
         transition: color .2s ease;
 
         &:hover {
-            color: darken(#ff6f00, 5%) !important;
+            color: darken(#2f79ee, 5%) !important;
         }
     }
 
@@ -97,5 +104,8 @@ export default {
         margin-top: 15px;
         margin-bottom: 0;
         border-radius: 20px 20px 0 0 ;
+    }
+    .discipline {
+        background-color: lighten(#2f79ee, 40%);
     }
 </style>

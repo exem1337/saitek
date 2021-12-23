@@ -3,7 +3,7 @@
   <app-header/>
    <!-- <transition name="bounce"> -->
   <router-view></router-view>
-  <!-- </transition> -->
+   <!-- </transition> -->
   <!-- <i class="material-icons bgicon icon1">filter_none</i> -->
 </template>
 
@@ -26,6 +26,7 @@ export default {
 
 
 <style lang="scss">
+  $main-color : #8f99a3;
   .bgicon{
     font-size: 25em;
     opacity: 3%;
@@ -38,8 +39,8 @@ export default {
   }
 
   body{
-    background-color: #f3ebe2 ;
-
+    //background-color: #f3ebe2 ;
+    background-color: lighten(#2f79ee, 50%);
     .bg-image{
         //background-image: url('../src/img/bg.png');
         position: absolute;
@@ -128,7 +129,7 @@ export default {
     transform: scale(0);
   }
   50% {
-    transform: scale(1.25);
+    transform: scale(1.05);
   }
   100% {
     transform: scale(1);

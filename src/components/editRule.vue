@@ -2,32 +2,71 @@
 <div class="editorIn">
     <h3 class="grey-text text-darken-2 headText z-depth-3">Редактор правила</h3>
         <div class="card horizontal editContainer z-depth-3 white darken-2">
-            <div class="inputs amber darken-2 z-depth-2">
+            <div class="inputs z-depth-2">
                 <div class="input-field">
-                    <input placeholder="Placeholder" id="last_name" type="text" class="validate" value="12">
-                    <label for="last_name">Стрессоустойчивость</label>
+                    <select>
+                    <option value="1" selected>Низкий</option>
+                    <option value="2">Ниже среднего</option>
+                    <option value="3">Средний</option>
+                    <option value="3">Выше среднего</option>
+                    <option value="3">Высокий</option>
+                    </select>
+                    <label>Стрессоустойчивость</label>
                 </div>
                 <div class="input-field">
-                    <input id="lasst_name" type="text" class="validate" value="12">
-                    <label for="lasst_name">Стрессоустойчивость</label>
+                    <select>
+                    <option value="1" selected>Низкий</option>
+                    <option value="2">Ниже среднего</option>
+                    <option value="3">Средний</option>
+                    <option value="3">Выше среднего</option>
+                    <option value="3">Высокий</option>
+                    </select>
+                    <label>Стрессоустойчивость</label>
                 </div>
                 <div class="input-field">
-                    <input id="lastt_name" type="text" class="validate" value="12">
-                    <label for="lastt_name">Стрессоустойчивость</label>
+                    <select>
+                    <option value="1" selected>Низкий</option>
+                    <option value="2">Ниже среднего</option>
+                    <option value="3">Средний</option>
+                    <option value="3">Выше среднего</option>
+                    <option value="3">Высокий</option>
+                    </select>
+                    <label>Стрессоустойчивость</label>
                 </div>
                 <div class="input-field">
-                    <input id="lasta_name" type="text" class="validate" value="12">
-                    <label for="lasta_name">Стрессоустойчивость</label>
+                    <select>
+                    <option value="1" selected>Низкий</option>
+                    <option value="2">Ниже среднего</option>
+                    <option value="3">Средний</option>
+                    <option value="3">Выше среднего</option>
+                    <option value="3">Высокий</option>
+                    </select>
+                    <label>Стрессоустойчивость</label>
                 </div>
                 <div class="input-field">
-                    <input id="lastq_name" type="text" class="validate" value="12">
-                    <label for="lastq_name">Стрессоустойчивость</label>
+                    <select>
+                    <option value="1" selected>Низкий</option>
+                    <option value="2">Ниже среднего</option>
+                    <option value="3">Средний</option>
+                    <option value="3">Выше среднего</option>
+                    <option value="3">Высокий</option>
+                    </select>
+                    <label>Стрессоустойчивость</label>
                 </div>
             </div>
             <i class="material-icons">arrow_forward</i>
-            <div class="inputs resultContainer darken-2 z-depth-2 resultContainer">
-            <p>Результат: Новичок</p>
-        </div>
+        <!-- <div class="inputs resultContainer darken-2 z-depth-2 resultContainer"> -->
+            <div class="input-field" style="margin: 0;">
+                    <select>
+                    <option value="1" selected>Новичок</option>
+                    <option value="2">Стажер</option>
+                    <option value="3">Мастер</option>
+                    <option value="3">Профессионал</option>
+                    <option value="3">Эксперт</option>
+                    </select>
+                    <label>Статус</label>
+            </div>
+        <!-- </div> -->
     </div>
     <a @click="editSave" class="btn-floating saveBtn btn-large waves-effect waves-light red"><i class="material-icons" style="font-size: 2em;">cloud</i></a>
 </div>
@@ -79,7 +118,7 @@ export default {
     }
 
     .resultContainer{
-        background-color: lighten(#4f2fa9, 20%);
+        background-color: #2acc72;
         color:#fff;
         font-weight: 700;
     }
@@ -92,6 +131,6 @@ export default {
         bottom: 30px;
         right: 10px;
         z-index: 3;
-        background-color: lighten(#4f2fa9, 20%) !important;
+        background-color: #2acc72 !important;
     }
 </style>

@@ -1,20 +1,17 @@
 <template>
     <div class="container">
-        <h3 class="grey-text text-darken-2 headText z-depth-3">Панель эксперта</h3>
-        <div class="card horizontal rulesContainer z-depth-3 amber darken-2">
-            <h4 class="white-text text-darken-2" style="font-weight: 500; font-size: 3em">Редактор базы правил</h4>
+        <h3 class="grey-text text-darken-2 headText z-depth-3">Редактор базы правил</h3>
+        <div class="card horizontal rulesContainer z-depth-3">
+            <!-- <h4 class="blue-text text-darken-3" style="font-weight: 500; font-size: 3em; opacity: 40%;">Редактор базы правил</h4> -->
             <ul class="rulesCard">
-                <li @click="editShow" class="rule grey-text z-depth-2 waves-effect text-lighten-2" style="padding: 15px;" v-for="rule in this.rules" :key="rule.key">
-                    {{rule.text}}
+                <li @click="editShow" class="rule z-depth-2 waves-effect" style="padding: 15px;" v-for="rule in this.rules" :key="rule.key">
+                    {{rule.text}}<br>
+                    <p class="flow-text" style="margin: 0;">{{rule.value}}</p>
                     <i class="material-icons myIcon">settings</i>
                 </li>
                 <li @click="editShow" class="rule addRule z-depth-2 grey-text waves-effect text-lighten-2 white"><i class="material-icons myIconAdd">add</i></li>
             </ul>
             <i class="material-icons cardIcon">fingerprint</i>
-        </div>
-        <div class="card horizontal trassirovka z-depth-3">
-            <h4 class="white-text text-darken-2" style="font-weight: 500; font-size: 3em">Трассировка</h4>
-            <i class="material-icons cardIcon">library_books</i>
         </div>
     </div>
     <transition name="bounce">
@@ -22,7 +19,6 @@
         <edit-rule @editSave = "editSave"/>
     </div>
     </transition>
-
 </template>
 
 <script>
@@ -32,16 +28,16 @@ export default {
         return {
             rules:
             [
-                { key: 0, text: "Правило 1"},
-                { key: 1, text: "Правило 2"},
-                { key: 2, text: "Правило 3"},
-                { key: 3, text: "Правило 4"},
-                { key: 4, text: "Правило 5"},
-                { key: 5, text: "Правило 6"},
-                { key: 6, text: "Правило 7"},
-                { key: 7, text: "Правило 8"},
-                { key: 8, text: "Правило 9"},
-                { key: 9, text: "Правило 10"},
+                { key: 0, text: "Правило 1", value: "Если 1 условие И 2 условие И 3 условие ТОГДА результат"},
+                { key: 1, text: "Правило 2", value: "Если 1 условие И 2 условие И 3 условие ТОГДА результат"},
+                { key: 2, text: "Правило 3", value: "Если 1 условие И 2 условие И 3 условие ТОГДА результат"},
+                { key: 3, text: "Правило 4", value: "Если 1 условие И 2 условие И 3 условие ТОГДА результат"},
+                { key: 4, text: "Правило 5", value: "Если 1 условие И 2 условие И 3 условие ТОГДА результат"},
+                { key: 5, text: "Правило 6", value: "Если 1 условие И 2 условие И 3 условие ТОГДА результат"},
+                { key: 6, text: "Правило 7", value: "Если 1 условие И 2 условие И 3 условие ТОГДА результат"},
+                { key: 7, text: "Правило 8", value: "Если 1 условие И 2 условие И 3 условие ТОГДА результат"},
+                { key: 8, text: "Правило 9", value: "Если 1 условие И 2 условие И 3 условие ТОГДА результат"},
+                { key: 9, text: "Правило 10", value: "Если 1 условие И 2 условие И 3 условие ТОГДА результат"},
             ],
             edit : false
         }
@@ -84,20 +80,22 @@ export default {
     .rulesCard{
         display: flex;
         flex-wrap: wrap;
+        margin: 0;
     }
     .rule {
-        width: 30%;
-        height: 100px;
-        max-height: 100px;
+        width: 100%;
+        height: fit-content;
+        //max-height: 100px;
         margin: 10px;
-        background-color: lighten(#4f2fa9, 20%);
+        background-color: lighten(#b4e6eb, 20%);
         font-size: 2em;
         font-weight: 500;
         transition: .3s ease;
-
+        color: lighten(#2f79ee, 10%);
         &:hover {
-            background-color: darken(#4f2fa9, 10%);
-            transform: scale(110%);
+            background-color: lighten(#2f79ee, 5%);
+            transform: scale(103%);
+            color: #fff;
         }
 
         &:hover > .myIcon {
@@ -128,24 +126,12 @@ export default {
         to{ transform: rotate(360deg); }
     }
 
-    @media screen and (max-width: 750px) {
-        .rule {
-            width: 46%;
-        }
-    }
-
-    @media screen and (max-width: 630px) {
-        .rule {
-            width: 100%;
-        }
-    }
-
     .rulesContainer{
         overflow: hidden;
         margin-top: 0;
         position: relative;
         z-index: 2;
-        display: flex;
+        //display: flex;
         flex-direction: column;
         padding: 20px;
         transition: transform .2s ease;
@@ -155,26 +141,27 @@ export default {
         &:hover{
             transform: scale(101%);
         }
+        background-color: lighten(#2f79ee, 40%);
     }
 
-    .trassirovka{
-        margin-top: 0;
-        position: relative;
-        z-index: 2;
-        display: flex;
-        flex-direction: column;
-        padding: 20px;
-        h4{
-            margin: 0;
-        }
-        transition: transform .2s ease;
-        height: 500px;
-        background-color: lighten(#4f2fa9, 20%);
-        &:hover{
-            transform: scale(101%);
-        }
-        overflow: hidden;
-    }
+    // .trassirovka{
+    //     margin-top: 0;
+    //     position: relative;
+    //     z-index: 2;
+    //     display: flex;
+    //     flex-direction: column;
+    //     padding: 20px;
+    //     h4{
+    //         margin: 0;
+    //     }
+    //     transition: transform .2s ease;
+    //     height: 500px;
+    //     background-color: lighten(#2e77c4, 0%);
+    //     &:hover{
+    //         transform: scale(101%);
+    //     }
+    //     overflow: hidden;
+    // }
     .bounce-enter-active {
   animation: bounce-in 0.5s;
 }

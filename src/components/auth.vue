@@ -25,7 +25,7 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <router-link to="courses"><input type="submit" id="loginBtn" value="Войти" @click="login" class="waves-effect waves-light btn white-text amber darken-2" style="margin-left:10px; color: #fff; !important"></router-link>
+                                <router-link to="courses"><input type="submit" id="loginBtn" value="Войти" @click="login" class="waves-effect waves-light btn white-text" style="color: #fff; background-color: #2acc72; margin-left:10px; color: #fff; !important"></router-link>
                                 <a href="#" @click="startRegistering" class="waves-effect waves-light grey-text text-darken-2 btn register_btn">Зарегистрироваться</a>
                             </div>
                         </form>
@@ -112,7 +112,7 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <router-link to="courses"><input type="submit" @click="login" value="Завершить регистрацию" class="waves-effect waves-light btn amber darken-2" style="margin-left:10px;"></router-link>
+                                <router-link to="courses"><input type="submit" @click="login" value="Завершить регистрацию" class="waves-effect waves-light btn" style="background-color: #2f79ee; margin-left:10px;"></router-link>
                             </div>
                         </form>
 
@@ -176,13 +176,13 @@
                                 </label> -->
                                 </div>
                                 <div class="col s12 m6 l6">
-                                <label for="files" class="waves-effect waves-light btn white-text amber darken-2" style="cursor:pointer; margin-top:30px">Прикрепить трудовой договор</label>
+                                <label for="files" class="waves-effect waves-light btn white-text" style="background-color: #2acc72; cursor:pointer; margin-top:30px">Прикрепить трудовой договор</label>
                                 <input id="files" type="file" style="visibility:hidden;" class="waves-effect waves-light btn"/>
                                 </div>
 
                             </div>
                             <div class="row">
-                                <router-link to="courses"><input type="submit" value="Завершить регистрацию" @click="login" class="waves-effect waves-light btn amber darken-2" style="margin-left:10px;"></router-link>
+                                <router-link to="courses"><input type="submit" value="Завершить регистрацию" @click="login" class="waves-effect waves-light btn" style="background-color: #2acc72; margin-left:10px;"></router-link>
                             </div>
                         </form>
                     </div>
@@ -225,16 +225,16 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
     [type="radio"]:checked + span::after,
     [type="radio"].with-gap:checked + span::before,
     [type="radio"].with-gap:checked + span::after {
-        border: 2px solid #ff6f00;
+        border: 2px solid #2f79ee;
     }
 
     [type="radio"]:checked + span::after,
     [type="radio"].with-gap:checked + span::after {
-        background-color: #ff6f00;
+        background-color: #2f79ee;
     }
 
     .register_btn{
@@ -243,13 +243,13 @@ export default {
         background-color: #fff;
         &:hover{
             color:#fff !important;
-            background-color: #ffa000 !important;
+            background-color: #2acc72 !important;
         }
     }
     ::-webkit-file-upload-button {
         display: none;
         background: black;
-        color: red;
+        color: #2f79ee;
         padding: 1em;
     }
 
@@ -263,23 +263,23 @@ export default {
     }
     /* label underline focus color */
     .input-field input[type=text]:focus {
-        border-bottom: 1px solid #ff6f00 !important;
-        box-shadow: 0 1px 0 0 #ff6f00 !important;
+        border-bottom: 1px solid #2f79ee !important;
+        box-shadow: 0 1px 0 0 #2f79ee !important;
     }
 
     .checkbox-blue-grey[type="checkbox"].filled-in:checked+span:not(.lever):after {
-        border: 2px solid #ff6f00;
-        background-color: #ff6f00;
+        border: 2px solid #2f79ee;
+        background-color: #2f79ee;
     }
 
     .input-field input[type=password]:focus {
-        border-bottom: 1px solid #ff6f00 !important;
-        box-shadow: 0 1px 0 0 #ff6f00 !important;
+        border-bottom: 1px solid #2f79ee !important;
+        box-shadow: 0 1px 0 0 #2f79ee !important;
     }
     input[type=checkbox]:checked {
-        background-color: #ff6f00 !important;
-        color: #ff6f00 !important;
-        box-shadow: 0 1px 0 0 #ff6f00 !important;
+        background-color: #2f79ee !important;
+        color: #2f79ee !important;
+        box-shadow: 0 1px 0 0 #2f79ee !important;
     }
     /* valid color */
     .input-field input[type=text].valid {
@@ -294,5 +294,9 @@ export default {
     /* icon prefix focus color */
     .input-field .prefix.active {
         color: #000;
+    }
+    .container {
+        position: relative;
+        z-index: 2;
     }
 </style>

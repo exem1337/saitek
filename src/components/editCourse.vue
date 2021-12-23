@@ -15,10 +15,11 @@
                         <!-- <label for="course_description">Описание курса</label> -->
                     </div>
                 </div>
-                <button @submit.prevent="saveChanges" class="waves-effect waves-light btn amber darken-4"><i class="material-icons left">cloud</i>Сохранить изменения</button>
+                <button @submit.prevent="saveChanges" class="waves-effect waves-light btn" style="background-color: #2acc72;"><i class="material-icons left">cloud</i>Сохранить изменения</button>
+                <a class="waves-effect waves-light btn" @click="this.edit = true;" style="background-color: #2f79ee; margin-left: 15px;"><i class="material-icons left">group_add</i>Редактор групп</a>
                 <ul>
                     <li v-for="theme in course.courseThemes" :key="theme.themeID">
-                        <div class="card amber lighten-2 waves-effect" style="width:100%">
+                        <div class="card courseCard" style="width:100%">
                             <div class="card-content grey-text text-darken-2" style="font-weight: 600;">
                                 <span class="card-title" style="font-weight: 600;">{{theme.name}} Сложность: {{ getDifficuiltyName(theme.difficuilty) }}</span>
                                 <p>I am a very simple card. I am good at containing small bits of information.
@@ -33,9 +34,13 @@
             </form>
         </div>
     </div>
+    <div v-if="this.edit" class="editor" @click="modalClick">
+        <edit-course-group class="editGroups"/>
+    </div>
 </template>
 
 <script>
+import editCourseGroup from '@/components/courseGroupEdit'
 export default {
     data () {
         return {
@@ -95,9 +100,13 @@ export default {
                         themeID: 10,
                         difficuilty: 6
                     },
-                ]
-            }
+                ],
+            },
+            edit : false
         }
+    },
+    components: {
+        editCourseGroup
     },
     mounted () {
         var elems = document.querySelectorAll('.material-tooltip');
@@ -107,6 +116,14 @@ export default {
         M.AutoInit();
     },
     methods: {
+        modalClick (e) {
+            var element = document.querySelector('.editWrapper');
+            var element1 = document.querySelector('.newGroupSearch');
+            console.log(e.target)
+             if (e.target !== element && !element.contains(e.target)) {
+                this.edit = false
+            }
+        },
         getDifficuiltyName(level) {
             if(level === 1) return "Легкий"
             if(level === 2) return "Низкий"
@@ -123,6 +140,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.courseCard {
+    background-color: lighten(#2f79ee, 40%);
+}
+.input-field .prefix.active {
+     color: #2f79ee;
+   }
 .headText{
         position: relative;
         z-index: 1;
@@ -136,11 +159,11 @@ export default {
 @mixin icons-stack {
         position: absolute;
         top: 5px;
-        color: #fff;
+        color: lighten(#2f79ee, 20%);
         transition: color .2s ease;
 
         &:hover {
-            color: darken(#ff6f00, 5%) !important;
+            color: darken(#2f79ee, 5%) !important;
         }
     }
 
@@ -157,12 +180,26 @@ export default {
         right: 65px;
     }
     textarea:focus {
-        border-bottom: 1px solid #ff6f00 !important;
-        box-shadow: 0 1px 0 0 #ff6f00 !important;
+        border-bottom: 1px solid #2f79ee !important;
+        box-shadow: 0 1px 0 0 #2f79ee !important;
     }
     .edit{
         position: relative;
         z-index: 2;
         margin-top: 0;
+
+    }
+    .editor{
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        backdrop-filter: blur(5px);
+        overflow: hidden;
     }
 </style>

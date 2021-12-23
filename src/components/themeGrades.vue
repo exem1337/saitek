@@ -2,14 +2,14 @@
     <div class="container">
         <h3 class="grey-text text-darken-2 headText z-depth-3">Оценки студентов по теме {{ course.courseThemeName }}</h3>
         <ul class="collection z-depth-3 white" style="width: 100%; margin-top:0">
-            <li class="white" style="margin: 15px"><button @click="sortByGroup" class="waves-effect waves-light btn amber darken-4"><i class="material-icons left">sort</i>Отсортировать по группам</button></li>
+            <li class="white" style="margin: 15px"><button @click="sortByGroup" class="waves-effect waves-light btn" style="background-color: #2acc72;"><i class="material-icons left">sort</i>Отсортировать по группам</button></li>
             <li v-for="student in course.students" :key="student.studentID" class="collection-item avatar userCard">
                 <img src="https://11m1a41kw68b2skba3uj53p1-wpengine.netdna-ssl.com/wp-content/uploads/2019/04/avatar-male.jpg" alt="" class="circle">
                 <span class="title">{{student.studentLastName}} {{student.studentName}} {{student.studentPatronim}}</span>
                 <p>Группа {{student.studentGroup}} <br>
                     Дата последнего тестирования: {{student.studenPassTime}}
                 </p>
-                <a href="#!" class="secondary-content valign-wrapper amber-text text-darken-4"><i class="material-icons amber-text text-darken-4">grade</i>Оценка: {{ student.studentGrade }}/100 </a>
+                <a href="#!" class="secondary-content valign-wrapper" style="color: #2acc72;"><i class="material-icons" style="color: #2acc72;">grade</i>Оценка: {{ student.studentGrade }}/100 </a>
             </li>
         </ul>
     </div>

@@ -5,8 +5,8 @@
             <div class="theme-name spotlight z-depth-2">
                 <p class="white-text">Дисциплина: Основы программирования на языке C++ <br> Тема: Тема 1 - Введение в C++</p>
                 <ul class="pagination">
-                    <li class="disabled amber darken-4"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
-                    <li class="waves-effect amber darken-4"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
+                    <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
+                    <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
                 </ul>
             </div>
             <themeContent/>
@@ -51,11 +51,17 @@ export default {
     display: flex;
 }
 
+@media screen and (max-width: 1000px) {
+    .theme-name {
+        margin-right: 0 !important;
+    }
+}
+
 .theme-name{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #4f2fa9 !important;
+    background-color: lighten(#2f79ee, 5%) !important;
     border-radius: 0px 0 20px 20px;
     position: relative;
     z-index: 2;
@@ -73,16 +79,13 @@ export default {
     flex-wrap: nowrap !important;
 
     li{
-        background-color: cadetblue;
+        background-color: #2acc72 !important;
         margin: 0px 5px !important;
         width: 50px !important;
 
         i{
             transition: .3s ease-in-out;
             color: #fff !important;
-            &:hover {
-                color: #ccc !important;
-            }
         }
     }
 }

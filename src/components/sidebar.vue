@@ -9,7 +9,7 @@
     </aside>
 
     <div class="fixed-action-btn toggle-menu">
-        <a class="btn-floating btn-large amber darken-4">
+        <a class="btn-floating btn-large">
           <i class="large material-icons">list</i>
         </a>
     </div>
@@ -51,6 +51,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.btn-floating{
+  background-color: #2acc72;
+}
+
 *, *:before, *:after {
   box-sizing: border-box;
 }
