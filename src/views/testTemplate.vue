@@ -20,10 +20,11 @@
 <script>
 import { onMounted, ref } from "vue";
 import testQuestion from "@/components/testQuestion.vue";
+import axios from 'axios'
 export default {
   components: { testQuestion },
   setup() {
-    let server = "http://db.19ivt.ru/8080"
+    let server = "http://localhost:8080/"
     let i = ref(0);
     let results = ref(false);
     let correctCount = ref(0);
@@ -63,12 +64,14 @@ export default {
     let question = []
 
     onMounted(() => {
-      axios.get(server + "/getTest?testKey=79", (res) => {
+      console.log("jija");
+        axios.get(server + "getTest?testKey=79")
+        .then((res) => {
         if (res == "Ошибочка") {
           M.toast({ html: "Серверная ошибка" });
         }
-        question = res
-        console.log(res);
+        question = res.data
+        console.log(res.data);
         testReady.value = true
       });
     });
