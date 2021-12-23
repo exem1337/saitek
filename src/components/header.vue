@@ -8,7 +8,7 @@
               <ul class="right hide-on-med-and-down">
                 <li v-if="$store.state.logged" @click="bgtransform"><router-link to="/profile" class="da">Мой профиль</router-link></li>
                 <li v-if="$store.state.logged"><router-link to="courses" class="da">Курсы</router-link></li>
-
+                <li v-if="$store.state.logged" @click="bgtransform"><router-link to="/test" class="da">Тесты</router-link></li>
                 <li v-if="$store.state.logged" @click="bgtransform"><router-link to="/profile" class="da">Оценочные материалы</router-link></li>
                 <li v-if="$store.state.userType === 2" class="da settings" style="padding: 0 15px">Экспертная система
                   <div class="edit-inner">
