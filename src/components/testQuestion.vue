@@ -29,7 +29,7 @@ export default {
   },
   setup(props, { emit }) {
     const answer = ref();
-
+    console.log(props.questions);
     const getAnswer = () => {
 
       if (answer.value == false || answer.value == true) emit("onAnswer", answer.value);

@@ -9,6 +9,7 @@
 
 <script>
 import testItem from '@/components/testItem.vue'
+import axios from 'axios'
 export default {
     data() {
         return {
