@@ -1,5 +1,6 @@
 <template>
   <div class="container">
+    <h5>Вопрос номер {{questionIndex+1}}</h5>
     <p>{{ questions.Header }}</p>
     <form action="#" @submit.prevent="getAnswer">
       <p v-for="question in questions.Answer" :key="question.Key">
@@ -7,10 +8,10 @@
           <input
             name="group1"
             type="radio"
-            :value="question.isCorrect"
+            :value="question.IsCorrect"
             v-model="answer"
           />
-          <span>{{ question.Text }}</span>
+          <span :class="{ green: question.IsCorrect }">{{ question.Text }}</span>
         </label>
       </p>
       <input type="submit" />
@@ -26,13 +27,17 @@ export default {
       type: Object,
       required: true,
     },
+    questionIndex: {
+      type: Number,
+      required: true
+    }
   },
   setup(props, { emit }) {
-    const answer = ref();
-    console.log(props.questions);
+    let answer = ref();
     const getAnswer = () => {
-
-      if (answer.value == false || answer.value == true) emit("onAnswer", answer.value);
+      console.log(answer.value);
+      if (answer.value == 0 || answer.value == 1)
+        emit("onAnswer", answer.value);
       else M.toast({ html: "Выберите вариант ответа" });
     };
 
@@ -40,3 +45,9 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.green{
+  color: green !important;
+}
+</style>
