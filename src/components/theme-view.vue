@@ -1,5 +1,5 @@
 <template>
-    <iframe src="/aas.pdf"></iframe>
+    <iframe wmode=transparent frameborder="0" src="/aas.pdf#toolbar=0"></iframe>
 </template>
 
 <script>
@@ -11,6 +11,12 @@ export default {
 }
 </script>
 
-<style lang="sss" scoped>
-
+<style lang="scss" scoped>
+iframe{
+    width: 99%;
+    height: 91%;
+    position: relative;
+    z-index: 1;
+    //transform: translateY(-15px);
+}
 </style>

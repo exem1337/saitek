@@ -45,6 +45,8 @@ export default {
 <style scoped lang="scss">
 .content{
     height: 91vh;
+    width: 100%;
+    
 }
 
 .theme-inner{
@@ -52,6 +54,18 @@ export default {
 }
 
 @media screen and (max-width: 1000px) {
+    .theme-name {
+        margin-right: 0 !important;
+    }
+    .content{
+        margin-right: 0 !important;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .content{
+        margin-right: 0 !important;
+    }
     .theme-name {
         margin-right: 0 !important;
     }

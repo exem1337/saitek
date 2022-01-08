@@ -25,7 +25,7 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <router-link to="courses"><input type="submit" id="loginBtn" value="Войти" @click="login" class="waves-effect waves-light btn white-text" style="color: #fff; background-color: #2acc72; margin-left:10px; color: #fff; !important"></router-link>
+                                <router-link to="courses"><input type="submit" id="loginBtn" value="Войти" @click="login" class="waves-effect waves-light btn white-text" style="color: #fff; background-color: #2f79ee; margin-left:10px; color: #fff; !important"></router-link>
                                 <a href="#" @click="startRegistering" class="waves-effect waves-light grey-text text-darken-2 btn register_btn">Зарегистрироваться</a>
                             </div>
                         </form>
@@ -176,13 +176,13 @@
                                 </label> -->
                                 </div>
                                 <div class="col s12 m6 l6">
-                                <label for="files" class="waves-effect waves-light btn white-text" style="background-color: #2acc72; cursor:pointer; margin-top:30px">Прикрепить трудовой договор</label>
+                                <label for="files" class="waves-effect waves-light btn white-text" style="background-color: #2f79ee; cursor:pointer; margin-top:30px">Прикрепить трудовой договор</label>
                                 <input id="files" type="file" style="visibility:hidden;" class="waves-effect waves-light btn"/>
                                 </div>
 
                             </div>
                             <div class="row">
-                                <router-link to="courses"><input type="submit" value="Завершить регистрацию" @click="login" class="waves-effect waves-light btn" style="background-color: #2acc72; margin-left:10px;"></router-link>
+                                <router-link to="courses"><input type="submit" value="Завершить регистрацию" @click="login" class="waves-effect waves-light btn" style="background-color: #2f79ee; margin-left:10px;"></router-link>
                             </div>
                         </form>
                     </div>
@@ -243,7 +243,7 @@ export default {
         background-color: #fff;
         &:hover{
             color:#fff !important;
-            background-color: #2acc72 !important;
+            background-color: #2f79ee !important;
         }
     }
     ::-webkit-file-upload-button {

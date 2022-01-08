@@ -192,7 +192,7 @@ export default {
     position: relative;
     z-index: 2;
 
-    max-width: 700px;
+    
     //padding: 15px;
 
 }

@@ -39,38 +39,7 @@ export default {
     let results = ref(false);
     let correctCount = ref(0);
     let testReady = ref(false);
-    // const question = [
-    //   {
-    //     name: "вопрос 1",
-    //     vars: [
-    //       {
-    //         key: 0,
-    //         text: "da",
-    //         isCorrect: true,
-    //       },
-    //       {
-    //         key: 1,
-    //         text: "net",
-    //         isCorrect: false,
-    //       },
-    //     ],
-    //   },
-    //   {
-    //     name: "вопрос 2",
-    //     vars: [
-    //       {
-    //         key: 0,
-    //         text: "da ladno",
-    //         isCorrect: true,
-    //       },
-    //       {
-    //         key: 1,
-    //         text: "net",
-    //         isCorrect: false,
-    //       },
-    //     ],
-    //   },
-    // ];
+    
     const question = [
       {
         Header:
@@ -591,15 +560,15 @@ export default {
     //   });
     // });
 
-    const start = ref(false)
+    const start = ref(false);
 
     const startTest = () => {
-      start.value = true
+      start.value = true;
 
       intervalValue = setInterval(() => {
         count.value += 1;
       }, 1000);
-    }
+    };
 
     const onAnswer = (answer) => {
       if (answer == 1) {
@@ -607,12 +576,25 @@ export default {
       }
       if (i.value < question.length - 1) {
         i.value = i.value + 1;
-      } else { results.value = true; clearInterval(intervalValue) }
+      } else {
+        results.value = true;
+        clearInterval(intervalValue);
+      }
     };
     let intervalValue;
-    const count = ref(0)
+    const count = ref(0);
 
-    return { question, i, onAnswer, results, correctCount, testReady, start, startTest, count };
+    return {
+      question,
+      i,
+      onAnswer,
+      results,
+      correctCount,
+      testReady,
+      start,
+      startTest,
+      count,
+    };
   },
 };
 </script>

@@ -82,7 +82,7 @@ h1 {
   border-radius: 0 20px 20px 0px;
   margin: 10px;
   margin-left: 0;
-  width: 7000px;
+  max-width: 250px;
   background-color: #fff;
   left: 0;
 }
