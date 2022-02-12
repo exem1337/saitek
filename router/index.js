@@ -1,18 +1,18 @@
 import VueRouter from "vue-router";
 import { createWebHistory, createRouter } from "vue-router";
 
-import Auth from "../src/components/auth";
-import notFound from "../src/components/404.vue";
-import course from "../src/components/course.vue";
-import profile from "../src/components/profile.vue";
-import courses from "../src/components/courses.vue";
-import courseEditor from "../src/components/editCourse.vue";
-import themeGrades from "../src/components/themeGrades.vue";
-import adminSettings from "../src/components/adminSettings";
+import Auth from "../src/views/auth.vue";
+import notFound from "../src/views/404.vue";
+import course from "../src/views/course.vue";
+import profile from "../src/views/profile.vue";
+import courses from "../src/views/courses.vue";
+import courseEditor from "../src/views/editCourse.vue";
+import themeGrades from "../src/views/themeGrades.vue";
+import adminSettings from "../src/views/adminSettings";
 import editRule from "../src/components/editRule";
-import about from "../src/components/about";
-import test from "../src/components/testTemplate";
-import mamdaniForm from "../src/components/mamdaniForm";
+import about from "../src/views/about";
+import test from "../src/views/testTemplate";
+import mamdaniForm from "../src/views/mamdaniForm";
 import testTemplate from "../src/views/testTemplate";
 const routes = [
   {

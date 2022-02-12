@@ -39,7 +39,7 @@ export default {
     let results = ref(false);
     let correctCount = ref(0);
     let testReady = ref(false);
-    
+
     const question = [
       {
         Header:
@@ -610,10 +610,5 @@ export default {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
-  button {
-    //font-size: 2.5em;
-    //padding: 15px;
-  }
 }
 </style>

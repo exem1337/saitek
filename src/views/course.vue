@@ -16,7 +16,7 @@
 
 <script>
 //import changeColor from '../js/hoverColor.js'
-import header from '../components/header.vue'
+import header from '../components/headerNav.vue'
 import sidebar from '../components/sidebar.vue'
 import themeContent from '../components/themeContent.vue'
 export default {
@@ -46,7 +46,7 @@ export default {
 .content{
     height: 91vh;
     width: 100%;
-    
+
 }
 
 .theme-inner{

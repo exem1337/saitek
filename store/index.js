@@ -10,7 +10,7 @@ export default createStore ({
             groupId: -1,
             contractID: -1,
             facultyId: -1,
-            bgRotation: 0 
+            bgRotation: 0
         }
     },
     mutations: {
@@ -23,14 +23,7 @@ export default createStore ({
             state.userType = 0
             state.logged = false
             console.log("logout")
-        },
-        transformBG(state) {
-            let bg = document.querySelector('.bg-image');
-            bg.style.transform = 'rotate(' + (state.bgRotation + 90) + 'deg)';
-            state.bgRotation += 90;
-            console.log(bg);
         }
-
     }
-    
+
 })
