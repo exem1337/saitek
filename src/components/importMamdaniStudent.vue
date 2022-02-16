@@ -47,5 +47,9 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    .newGroupSearch{
+        width: 40%;
+    }
 }
 </style>

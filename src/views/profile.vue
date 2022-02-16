@@ -48,7 +48,7 @@
         Статистика по дисциплинам
       </h4>
       <ul>
-        <li v-for="stat in this.stats" :key="stat.key">
+        <li v-for="stat in this.stats" :key="stat.key" style="margin: 15px 0px;" @click="e => e.target.classList.toggle('active')">
           <div class="discipline z-depth-2">
             <h4 style="margin-bottom: 15px">{{ stat.discName }}</h4>
             <h3 class="progress-label">{{ stat.percentage }}%</h3>
@@ -63,7 +63,7 @@
         </li>
       </ul>
 
-      <i class="material-icons cardIcon">fingerprint</i>
+      <!-- <i class="material-icons cardIcon">fingerprint</i> -->
     </div>
   </div>
 </template>
@@ -152,6 +152,7 @@ ul:last-child > li > .discipline {
   padding: 10px;
   border-radius: 15px;
   margin-bottom: 15px;
+  //margin-top: 15px;
   position: relative;
   z-index: 2;
   transition: 0.3s ease;
@@ -162,7 +163,7 @@ ul:last-child > li > .discipline {
   &:hover > .progress-label {
     opacity: 30%;
   }
-  &:hover > .discipline-theme-progress {
+  .active > .discipline-theme-progress {
       height: fit-content;
       opacity: 1;
   }

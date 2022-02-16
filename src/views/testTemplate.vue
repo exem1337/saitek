@@ -1,14 +1,15 @@
 <template>
   <div class="container">
-    <div class="counter" v-if="start">Время тестирования: {{ count }}</div>
     <div class="card z-depth-2 test-template">
       <div v-if="!start" class="test-startup">
-        <h4>Глава 10. Введение в объектно-ориентированное программирование</h4>
+        <h4 class="big-margin-bottom">Глава 1. Введение в С++</h4>
+        <p class="left-bottom">Количество вопросов: 10</p>
+        <p class="testing-student">Тестируемый: Акладский Данила Вячеславович</p>
         <button
           class="waves-effect waves-light btn white-text"
           @click="startTest"
         >
-          Начать
+          Начать тестирование
         </button>
       </div>
 
@@ -22,8 +23,10 @@
         <p>
           Результаты тестирования: {{ correctCount }} из {{ question.length }}
         </p>
+        <router-link to="/course" class="waves-effect waves-light btn white-text">Вернуться к курсу</router-link>
       </form>
     </div>
+    <div class="counter" v-if="start">Время тестирования: {{ count }}</div>
   </div>
 </template>
 
@@ -603,6 +606,7 @@ export default {
 .test-template {
   margin-top: 100px;
   padding: 15px;
+  position:relative;
 }
 
 .test-startup {
@@ -610,5 +614,25 @@ export default {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.btn {
+  background-color: #2f79ee !important;
+}
+
+.testing-student{
+  position: absolute;
+  bottom: 0;
+  right: 25px;
+}
+
+.left-bottom{
+  position: absolute;
+  bottom: 0;
+  left: 25px;
+}
+
+.big-margin-bottom{
+  margin-bottom: 100px;
 }
 </style>

@@ -2,7 +2,7 @@
 <div class="container">
 <h3 class="grey-text text-darken-2 headText z-depth-3">Определение статуса обучаемого</h3>
 <div class="card-panel z-depth-3 white-text" style="padding-bottom: 0; border-radius: 0 20px 20px 20px; position: relative; z-index: 3; transform: translateY(-10px);">
-    <button @click="toggleModal" class="waves-effect waves-light btn white-text" style="background-color: #2acc72; margin-left:10px; color: #fff; !important" >Загрузить данные студента</button>
+    <button @click="toggleModal" class="waves-effect waves-light btn white-text" style="background-color: #2f79ee; margin-left:10px; margin-bottom: 10px; color: #fff; !important" >Загрузить данные студента</button>
     <p class="grey-text text-darken-2" style="font-size: 1.5em; padding: 0; margin: 0; margin-bottom: 15px;">Уважаемый Акладский Данила Вячеславович! <br> Вы получили следующие результаты:</p>
     <form action="" v-on:submit.prevent="onSubmit">
 
@@ -36,10 +36,10 @@
                 </div>
             </div>
         </div>
-        <input type="submit" id="loginBtn" value="Определить" class="waves-effect waves-light btn white-text" style="color: #fff; background-color: #2acc72; margin-left:10px; color: #fff; !important">
+        <input type="submit" id="loginBtn" value="Определить" class="waves-effect waves-light btn white-text" style="color: #fff; background-color: #2f79ee; margin-left:10px; color: #fff; !important">
         <div class="result">
             <p style="font-size: 1.5em;" class="grey-text text-darken-2">Ваш статус: <span>ПРОФЕССИОНАЛ</span></p>
-            <input type="submit" id="loginBtn" value="Продолжить" class="waves-effect waves-light btn white-text" style="background-color: #2acc72; margin-left:10px; color: #fff; !important">
+            <input type="submit" id="loginBtn" value="Продолжить" class="waves-effect waves-light btn white-text" style="background-color: #2f79ee; margin-left:10px; color: #fff; !important">
         </div>
     </form>
 </div>

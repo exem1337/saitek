@@ -15,7 +15,7 @@
                         <!-- <label for="course_description">Описание курса</label> -->
                     </div>
                 </div>
-                <button @submit.prevent="saveChanges" class="waves-effect waves-light btn" style="background-color: #2acc72;"><i class="material-icons left">cloud</i>Сохранить изменения</button>
+                <button @submit.prevent="saveChanges" class="waves-effect waves-light btn" style="background-color: #2f79ee;"><i class="material-icons left">cloud</i>Сохранить изменения</button>
                 <a class="waves-effect waves-light btn" @click="this.edit = true;" style="background-color: #2f79ee; margin-left: 15px;"><i class="material-icons left">group_add</i>Редактор групп</a>
                 <ul>
                     <li v-for="theme in course.courseThemes" :key="theme.themeID">

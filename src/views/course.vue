@@ -4,10 +4,11 @@
         <div class="content flow-text">
             <div class="theme-name spotlight z-depth-2">
                 <p class="white-text">Дисциплина: Основы программирования на языке C++ <br> Тема: Тема 1 - Введение в C++</p>
-                <ul class="pagination">
+                <!-- <ul class="pagination">
                     <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
                     <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
-                </ul>
+                </ul> -->
+                <router-link to="/test" class="waves-effect waves-light btn white-text">Пройти тестирование</router-link>
             </div>
             <themeContent/>
         </div>
@@ -71,12 +72,16 @@ export default {
     }
 }
 
+.btn {
+  background-color: #2f79ee !important;
+}
+
 .theme-name{
     display: flex;
     align-items: center;
     justify-content: space-between;
     background-color: lighten(#2f79ee, 5%) !important;
-    border-radius: 0px 0 20px 20px;
+    //border-radius: 0px 0 20px 20px;
     position: relative;
     z-index: 2;
     margin-left: 0px;

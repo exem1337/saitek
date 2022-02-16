@@ -3,7 +3,7 @@
     <h3 class="themes">Главы</h3>
     <nav>
         <ul>
-          <li v-for="theme in themes" v-bind:key="theme.key" style="cursor: pointer;">{{ theme.name }}</li>
+          <li v-for="theme in themes" v-bind:key="theme.key" style="cursor: pointer;" :class="{'active' : theme.key == 1}">{{ theme.name }}</li>
         </ul>
     </nav>
     </aside>
@@ -24,23 +24,15 @@ export default {
         return {
             themes: [
                 { name: 'Глава 1. Введение в С++' , key: 1},
-                { name: 'Глава 1. Введение в С++' , key: 2},
-                { name: 'Глава 1. Введение в С++' , key: 3},
-                { name: 'Глава 1. Введение в С++' , key: 4},
-                { name: 'Глава 1. Введение в С++' , key: 5},
-                { name: 'Глава 1. Введение в С++' , key: 6},
-                { name: 'Глава 1. Введение в С++' , key: 7},
-                { name: 'Глава 1. Введение в С++' , key: 8},
-                { name: 'Глава 1. Введение в С++' , key: 9},
-                { name: 'Глава 1. Введение в С++' , key: 10},
-                { name: 'Глава 1. Введение в С++' , key: 11},
-                { name: 'Глава 1. Введение в С++' , key: 12},
-                { name: 'Глава 1. Введение в С++' , key: 13},
-                { name: 'Глава 1. Введение в С++' , key: 14},
-                { name: 'Глава 1. Введение в С++' , key: 15},
-                { name: 'Глава 1. Введение в С++' , key: 16},
-                { name: 'Глава 1. Введение в С++' , key: 17},
-                { name: 'Глава 1. Введение в С++' , key: 18},
+                { name: 'Глава 2. Массивы' , key: 2},
+                { name: 'Глава 3. Работа со строками в С++' , key: 3},
+                { name: 'Глава 4. Использование указателей в языке С++' , key: 4},
+                { name: 'Глава 5. Пользовательские функции в языке C++' , key: 5},
+                { name: 'Глава 6. Работа с типами и структурами данных' , key: 6},
+                { name: 'Глава 7. Динамические структуры данных' , key: 7},
+                { name: 'Глава 8. Работа с файлами в С++' , key: 8},
+                { name: 'Глава 9. Визуальное программирование в языке C++' , key: 9},
+                { name: 'Глава 10. Введение в объектно-ориентированное программирование' , key: 10},
             ],
         }
     },
@@ -152,8 +144,8 @@ nav ul li {
   line-height: 20px;
 }
 nav ul li.active {
-  border-color: #ff6f00;
-  color: #ff6f00;
+  border-color: #2f79ee;
+  color: #2f79ee;
 }
 
 @media all and (max-width: 1024px) {

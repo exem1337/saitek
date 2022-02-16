@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-image"></div>
+  <!-- <div class="bg-image"></div> -->
   <app-header/>
    <!-- <transition name="bounce"> -->
   <router-view></router-view>

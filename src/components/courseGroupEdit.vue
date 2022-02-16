@@ -19,7 +19,7 @@
             <h4>Поиск группы</h4>
             <div class="input-field col s6">
                 <i class="material-icons prefix">search</i>
-                <input id="icon_telephone" type="tel" class="validate">
+                <input id="icon_telephone" type="text" class="validate">
                 <label for="icon_telephone">Название группы</label>
             </div>
             <ul>
@@ -68,9 +68,9 @@ export default {
         li{
             position: relative;
             display: inline;
-            background-color: #2acc72;
+            background-color: #2f79ee;
             padding: 10px 30px;
-            color: lighten(#2acc72, 50%);
+            color: lighten(#2f79ee, 50%);
             font-size: 1.25em;
             font-weight: 500;
             margin: 10px;
@@ -93,7 +93,7 @@ export default {
                 height: 1em;
                 top: 0px;
                 right: 10px;
-                color:#2acc72;
+                color:#2f79ee;
                 transition: transform .1s ease-in-out;
             }
         }
@@ -103,7 +103,7 @@ export default {
         font-weight: 700;
         font-size: 4em;
         opacity: .5;
-        color: #2acc72;
+        color: #2f79ee;
         position: absolute;
         top: -25px;
         left: 10px;
@@ -120,14 +120,14 @@ export default {
         cursor: pointer;
         transition: .1s;
         &:hover {
-            color: #2acc72;
+            color: #2f79ee;
         }
     }
 }
 
 .input-field input[type=text]:focus {
-        border-bottom: 1px solid #2acc72 !important;
-        box-shadow: 0 1px 0 0 #2acc72 !important;
+        border-bottom: 1px solid #2f79ee !important;
+        box-shadow: 0 1px 0 0 #2f79ee !important;
     }
 
    .input-field label {
@@ -144,17 +144,17 @@ export default {
    }
    /* valid color */
    .input-field input[type=text].valid {
-     border-bottom: 1px solid #2acc72;
-     box-shadow: 0 1px 0 0 #2acc72;
+     border-bottom: 1px solid #2f79ee;
+     box-shadow: 0 1px 0 0 #2f79ee;
    }
    /* invalid color */
    .input-field input[type=text].invalid {
-     border-bottom: 1px solid #2acc72;
-     box-shadow: 0 1px 0 0 #2acc72;
+     border-bottom: 1px solid #2f79ee;
+     box-shadow: 0 1px 0 0 #2f79ee;
    }
    /* icon prefix focus color */
    .input-field .prefix.active {
-     color: #2acc72;
+     color: #2f79ee;
    }
 
 .wrapper-inner{
@@ -164,7 +164,7 @@ export default {
         position: absolute;
         top: 25px;
         right: 15px;
-        background-color: #2acc72;
+        background-color: #2f79ee;
     }
 }
 
@@ -192,7 +192,7 @@ export default {
     position: relative;
     z-index: 2;
 
-    
+
     //padding: 15px;
 
 }
