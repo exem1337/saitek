@@ -25,9 +25,9 @@
                     [
                         {
                             studentID: 1,
-                            studentName: "Данила",
-                            studentLastName: "Акладский",
-                            studentPatronim: "Вячеславович",
+                            studentName: "Алексей",
+                            studentLastName: "Алексеев",
+                            studentPatronim: "Алексеевич",
                             studentGrade: 75,
                             studenPassTime: "12.10.2021",
                             studentGroup: "19ИВТ(б)-ПОВТ"
@@ -35,35 +35,35 @@
                         {
                             studentID: 2,
                             studentName: "Данила",
-                            studentLastName: "Акладский",
-                            studentPatronim: "Вячеславович",
+                            studentLastName: "Данилин",
+                            studentPatronim: "Данилович",
                             studentGrade: 75,
                             studenPassTime: "12.10.2021",
                             studentGroup: "19ИВТ(б)-ВМК"
                         },
                         {
                             studentID: 3,
-                            studentName: "Данила",
-                            studentLastName: "Акладский",
-                            studentPatronim: "Вячеславович",
+                            studentName: "Игорь",
+                            studentLastName: "Игоренко",
+                            studentPatronim: "Игоревич",
                             studentGrade: 75,
                             studenPassTime: "12.10.2021",
                             studentGroup: "19ИВТ(б)-ПОВТ"
                         },
                         {
                             studentID: 4,
-                            studentName: "Данила",
-                            studentLastName: "Акладский",
-                            studentPatronim: "Вячеславович",
+                            studentName: "Александр",
+                            studentLastName: "Александров",
+                            studentPatronim: "Александрович",
                             studentGrade: 75,
                             studenPassTime: "12.10.2021",
                             studentGroup: "19ИВТ(б)-ПОВТ"
                         },
                         {
                             studentID: 5,
-                            studentName: "Данила",
-                            studentLastName: "Акладский",
-                            studentPatronim: "Вячеславович",
+                            studentName: "Никита",
+                            studentLastName: "Никитенко",
+                            studentPatronim: "Никитович",
                             studentGrade: 75,
                             studenPassTime: "12.10.2021",
                             studentGroup: "19ИВТ(б)-ПОВТ"

@@ -34,11 +34,11 @@ export default {
     data () {
         return {
             groupList: [
-                { key: 1, name: '19ИВТ(б)-ПОВТ' },
-                { key: 2, name: '19ИВТ(б)-ПОВТ' },
-                { key: 3, name: '19ИВТ(б)-ПОВТ' },
-                { key: 4, name: '19ИВТ(б)-ПОВТ' },
-                { key: 5, name: '19ИВТ(б)-ПОВТ' }
+                { key: 1, name: '19ИВТ(б)ПОВТ' },
+                { key: 2, name: '19ИВТ(б)ВМК' },
+                { key: 3, name: '19ИСТ(б)ОП' },
+                { key: 4, name: '19ИВТ(а)САУВТ' },
+                { key: 5, name: '19МКН(б)АПКМ' }
             ],
             searchGroups: false,
             editGroups: true

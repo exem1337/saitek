@@ -7,8 +7,7 @@
                     <div class="card waves-effect z-depth-3 discipline" style="width:100%">
                         <div class="card-content grey-text text-darken-2 course-card" style="font-weight: 500">
                             <span class="card-title" style="font-weight: 500">{{course}}</span>
-                            <p>I am a very simple card. I am good at containing small bits of information.
-                                I am convenient because I require little markup to use effectively.</p>
+                            <p>Курс по дисциплине: {{ course }}</p>
                             <router-link to="/courseEdit"><i v-if="$store.state.userType === 2 || $store.state.userType === 1" class="material-icons edit-icon tooltipped" data-position="top" data-tooltip="Редактировать курс">edit</i></router-link>
                             <router-link to="/courseEdit"><i v-if="$store.state.userType === 2 || $store.state.userType === 1" class="material-icons stats-icon tooltipped" data-position="top" data-tooltip="Статистика курса">view_list</i></router-link>
                         </div>

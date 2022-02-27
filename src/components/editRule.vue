@@ -11,7 +11,7 @@
                     <option value="3">Выше среднего</option>
                     <option value="3">Высокий</option>
                     </select>
-                    <label class="top-label">Стрессоустойчивость</label>
+                    <label class="top-label">Уровень усвоения дисциплины</label>
                 </div>
                 <div class="input-field">
                     <select class="browser-default">
@@ -21,7 +21,7 @@
                     <option value="3">Выше среднего</option>
                     <option value="3">Высокий</option>
                     </select>
-                    <label class="top-label">Стрессоустойчивость</label>
+                    <label class="top-label">Внимательность</label>
                 </div>
                 <div class="input-field">
                     <select class="browser-default">
@@ -31,7 +31,7 @@
                     <option value="3">Выше среднего</option>
                     <option value="3">Высокий</option>
                     </select>
-                    <label class="top-label">Стрессоустойчивость</label>
+                    <label class="top-label">Усидчивость</label>
                 </div>
                 <div class="input-field">
                     <select class="browser-default">
@@ -41,7 +41,17 @@
                     <option value="3">Выше среднего</option>
                     <option value="3">Высокий</option>
                     </select>
-                    <label class="top-label">Стрессоустойчивость</label>
+                    <label class="top-label">Стремление к самообучению</label>
+                </div>
+                <div class="input-field">
+                    <select class="browser-default">
+                    <option value="1" selected>Низкий</option>
+                    <option value="2">Ниже среднего</option>
+                    <option value="3">Средний</option>
+                    <option value="3">Выше среднего</option>
+                    <option value="3">Высокий</option>
+                    </select>
+                    <label class="top-label">Ответственность</label>
                 </div>
                 <div class="input-field">
                     <select class="browser-default">
@@ -109,7 +119,7 @@ export default {
     .inputs{
         display: flex;
         flex-direction: column;
-
+        width: 250px;
         padding: 15px;
         border-radius: 5px;
     }

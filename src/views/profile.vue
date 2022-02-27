@@ -89,17 +89,17 @@ export default {
           key: 0,
         },
         {
-          discName: "Основы программирования на языке C++",
+          discName: "Базы данных",
           percentage: 25,
           key: 1,
         },
         {
-          discName: "Основы программирования на языке C++",
+          discName: "Теория управления",
           percentage: 45,
           key: 2,
         },
         {
-          discName: "Основы программирования на языке C++",
+          discName: "Структуры и алгоритмы обработки данных",
           percentage: 100,
           key: 3,
         },

@@ -6,7 +6,7 @@
               <a href="#!" class="brand-logo white-text text-darken-4 hide-on-large-only">ИОС</a>
               <a v-if="$store.state.logged" href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
               <ul class="right hide-on-med-and-down"  style="position: relative; z-index: 3;">
-                <li v-if="$store.state.logged" ><router-link to="/profile" class="da">Мой профиль</router-link></li>
+                <li v-if="$store.state.logged" ><router-link to="/profile" class="da">Личный кабинет</router-link></li>
                 <li v-if="$store.state.logged"><router-link to="courses" class="da">Курсы</router-link></li>
                 <li v-if="$store.state.logged" ><router-link to="/profile" class="da">Оценочные материалы</router-link></li>
                 <li v-if="$store.state.userType === 2" class="da settings" style="padding: 0 15px; cursor: pointer;">Экспертная система
