@@ -22,8 +22,7 @@
                         <div class="card courseCard" style="width:100%">
                             <div class="card-content grey-text text-darken-2" style="font-weight: 600;">
                                 <span class="card-title" style="font-weight: 600;">{{theme.name}} Сложность: {{ getDifficuiltyName(theme.difficuilty) }}</span>
-                                <p>I am a very simple card. I am good at containing small bits of information.
-                                    I am convenient because I require little markup to use effectively.</p>
+                                <p>Основы программирования на языке C++. Сложность {{ getDifficuiltyName(theme.difficuilty) }}</p>
                                 <router-link to="/themeGrades"><i v-if="$store.state.userType === 2 || $store.state.userType === 1" class="material-icons edit-icon tooltipped" data-position="top" data-tooltip="Оценки">person</i></router-link>
                                 <router-link to="/courseEdit"><i v-if="$store.state.userType === 2 || $store.state.userType === 1" class="material-icons stats-icon tooltipped" data-position="top" data-tooltip="Редактировать тему">edit</i></router-link>
                                 <router-link to="/courseEdit"><i v-if="$store.state.userType === 2 || $store.state.userType === 1" class="material-icons test-icon tooltipped" data-position="top" data-tooltip="Редактировать тест">event_note</i></router-link>
@@ -125,11 +124,11 @@ export default {
             }
         },
         getDifficuiltyName(level) {
-            if(level === 1) return "Легкий"
-            if(level === 2) return "Низкий"
-            if(level === 3) return "Средний"
-            if(level === 4) return "Сложный"
-            if(level === 5) return "Профессионал"
+            if(level === 1) return "новичок"
+            if(level === 2) return "стажер"
+            if(level === 3) return "мастер"
+            if(level === 4) return "профессионал"
+            if(level === 5) return "эксперт"
         },
         saveChanges() {
 

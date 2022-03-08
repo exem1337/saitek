@@ -5,9 +5,16 @@
         <h4>Поиск студента</h4>
         <div class="input-field col s6">
             <i class="material-icons prefix">search</i>
-            <input id="icon_telephone" type="tel" class="validate">
+            <input id="icon_telephone" type="text" class="validate">
             <label for="icon_telephone">ФИО студента</label>
         </div>
+        <label>Browser Select</label>
+        <select class="browser-default">
+            <option value="" disabled selected>Выбор группы</option>
+            <option value="1">19ИВТ(б)-ПОВТ</option>
+            <option value="2">19ИВТ(б)ВМК</option>
+            <option value="3">19ИСТ(б)ОП</option>
+        </select>
         <ul>
             <li v-for="group in groupList" :key="group.key">{{group.name}}<i class="material-icons cardIcon addGroup">close</i></li>
         </ul>
@@ -51,5 +58,9 @@ export default {
     .newGroupSearch{
         width: 40%;
     }
+}
+
+.input-field input[type=text]:focus + label {
+    color: #000 !important;
 }
 </style>

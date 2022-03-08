@@ -1,6 +1,6 @@
 <template>
     <div class="container">
-        <h3 class="center">Войдите, или зарегистрируйтесь</h3>
+        <h3 class="center">Войдите или зарегистрируйтесь</h3>
         <div class="row">
             <div class="col s12">
                 <div class="card-panel z-depth-3 white-text" style="border-radius: 20px;">
@@ -193,7 +193,6 @@
 </template>
 
 <script>
-
 export default {
     data() {
         return{

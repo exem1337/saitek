@@ -41,7 +41,7 @@
                     <option value="3">Выше среднего</option>
                     <option value="3">Высокий</option>
                     </select>
-                    <label class="top-label">Стремление к самообучению</label>
+                    <label class="top-label">Стремление к самообучению и развитию</label>
                 </div>
                 <div class="input-field">
                     <select class="browser-default">

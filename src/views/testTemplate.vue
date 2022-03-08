@@ -4,7 +4,7 @@
       <div v-if="!start" class="test-startup">
         <h4 class="big-margin-bottom">Глава 1. Введение в С++</h4>
         <p class="left-bottom">Количество вопросов: 10</p>
-        <p class="testing-student">Тестируемый: Акладский Данила Вячеславович</p>
+        <p class="testing-student">Тестируемый: Егоров Владимир Юрьевич</p>
         <button
           class="waves-effect waves-light btn white-text"
           @click="startTest"

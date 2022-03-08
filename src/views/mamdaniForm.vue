@@ -3,7 +3,7 @@
 <h3 class="grey-text text-darken-2 headText z-depth-3">Определение статуса обучаемого</h3>
 <div class="card-panel z-depth-3 white-text" style="padding-bottom: 0; border-radius: 0 20px 20px 20px; position: relative; z-index: 3; transform: translateY(-10px);">
     <button @click="toggleModal" class="waves-effect waves-light btn white-text" style="background-color: #2f79ee; margin-left:10px; margin-bottom: 10px; color: #fff; !important" >Загрузить данные студента</button>
-    <p class="grey-text text-darken-2" style="font-size: 1.5em; padding: 0; margin: 0; margin-bottom: 15px;">Уважаемый Акладский Данила Вячеславович! <br> Вы получили следующие результаты:</p>
+    <p class="grey-text text-darken-2" style="font-size: 1.5em; padding: 0; margin: 0; margin-bottom: 15px;">Уважаемый Егоров Владимир Юрьевич! <br> Вы получили следующие результаты:</p>
     <form action="" v-on:submit.prevent="onSubmit">
 
         <div class="rule-input">
@@ -24,7 +24,7 @@
             <div class="col">
                 <div class="input-field">
                     <input id="selfDevelopment" type="number" class="validate">
-                    <label for="selfDevelopment">Стремление к самообучению</label>
+                    <label for="selfDevelopment">Стремление к самообучению и развитию</label>
                 </div>
                 <div class="input-field">
                     <input id="responsibility" type="number" class="validate">

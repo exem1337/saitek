@@ -73,9 +73,9 @@ export default {
   data() {
     return {
       user: {
-        name: "Данила",
-        surname: "Акладский",
-        patronim: "Вячеславович",
+        name: "Владимир",
+        surname: "Егоров",
+        patronim: "Юрьевич",
         avatar:
           "https://11m1a41kw68b2skba3uj53p1-wpengine.netdna-ssl.com/wp-content/uploads/2019/04/avatar-male.jpg",
         Faculty: "ФМИТ",

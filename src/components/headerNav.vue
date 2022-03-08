@@ -6,23 +6,23 @@
               <a href="#!" class="brand-logo white-text text-darken-4 hide-on-large-only">ИОС</a>
               <a v-if="$store.state.logged" href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
               <ul class="right hide-on-med-and-down"  style="position: relative; z-index: 3;">
-                <li v-if="$store.state.logged" ><router-link to="/profile" class="da">Личный кабинет</router-link></li>
-                <li v-if="$store.state.logged"><router-link to="courses" class="da">Курсы</router-link></li>
-                <li v-if="$store.state.logged" ><router-link to="/profile" class="da">Оценочные материалы</router-link></li>
-                <li v-if="$store.state.userType === 2" class="da settings" style="padding: 0 15px; cursor: pointer;">Экспертная система
+                <li v-if="$store.state.logged" ><router-link to="/profile" class="da big-font">Личный кабинет</router-link></li>
+                <li v-if="$store.state.logged"><router-link to="courses" class="da big-font">Курсы</router-link></li>
+                <!-- <li v-if="$store.state.logged" ><router-link to="/profile" class="da">Оценочные материалы</router-link></li> -->
+                <li v-if="$store.state.userType === 2" class="da settings big-font" style="padding: 0 15px; cursor: pointer;">Экспертная система
                   <div class="edit-inner">
-                    <router-link to="/adminSettings" class="settingsItem" style="border-radius: 10px 10px 0px 0px">
+                    <router-link to="/adminSettings" class="settingsItem big-font" style="border-radius: 10px 10px 0px 0px">
                       Редактор базы правил
                     </router-link>
-                    <router-link to="/mamdani" class="settingsItem" style="border-radius: 0px 0px 10px 10px; line-height: 25px; padding-bottom: 10px;">
-                      Определение статуса студента
+                    <router-link to="/mamdani" class="settingsItem big-font" style="border-radius: 0px 0px 10px 10px; line-height: 25px; padding-bottom: 10px;">
+                      Определение статуса обучаемого
                     </router-link>
 
                   </div>
 
                   </li>
-                <li><router-link to="/about" class="da">Справка</router-link></li>
-                <li v-if="$store.state.logged"><router-link to="/" @click="logout" class="da">Выход</router-link></li>
+                <li><router-link to="/about" class="da big-font">Справка</router-link></li>
+                <li v-if="$store.state.logged"><router-link to="/" @click="logout" class="da big-font">Выход</router-link></li>
               </ul>
             </div>
           </nav>
@@ -60,6 +60,10 @@ export default {
   display: block;
 }
 
+.big-font{
+  font-size: 1.5em;
+}
+
 .settingsItem{
   position: relative;
   z-index: 2;
@@ -74,13 +78,14 @@ export default {
   background-color: transparent; //lighten(#2f79ee, 0%);
   position: absolute;
   left: -35px;
-  width: 200px;
+  width: 300px;
   transform: translateY(-50px);
   z-index: 0;
   border-top: 5px solid transparent;
   display: block;
   transition: .5s ease;
   opacity: 0;
+  font-size: .5em;
 }
 
 .settings {
