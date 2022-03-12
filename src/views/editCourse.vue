@@ -16,7 +16,7 @@
                     </div>
                 </div>
                 <button @submit.prevent="saveChanges" class="waves-effect waves-light btn" style="background-color: #2f79ee;"><i class="material-icons left">cloud</i>Сохранить изменения</button>
-                <a class="waves-effect waves-light btn" @click="this.edit = true;" style="background-color: #2f79ee; margin-left: 15px;"><i class="material-icons left">group_add</i>Редактор групп</a>
+                <a class="waves-effect waves-light btn" @click="edit = true;" style="background-color: #2f79ee; margin-left: 15px;"><i class="material-icons left">group_add</i>Редактор групп</a>
                 <ul>
                     <li v-for="theme in course.courseThemes" :key="theme.themeID">
                         <div class="card courseCard" style="width:100%">
@@ -34,107 +34,115 @@
         </div>
     </div>
     <div v-if="this.edit" class="editor" @click="modalClick">
-        <edit-course-group class="editGroups"/>
+        <edit-course-group
+            class="editGroups"
+            @onCloseGroupModal="onCloseGroupModal"
+        />
     </div>
 </template>
 
 <script>
 import editCourseGroup from '@/components/courseGroupEdit'
+import { onMounted } from '@vue/runtime-core';
+import { ref } from 'vue'
 export default {
-    data () {
-        return {
-            course: {
-                courseID: 1,
-                courseName: "Основы программирования на языке C++",
-                courseDescription: "Это курс по c++",
-                courseThemes:
-                [
-                    {
-                        name: "Тема 1",
-                        themeID: 1,
-                        difficuilty: 1
-                    },
-                    {
-                        name: "Тема 1",
-                        themeID: 2,
-                        difficuilty: 2
-                    },
-                    {
-                        name: "Тема 1",
-                        themeID: 3,
-                        difficuilty: 3
-                    },
-                    {
-                        name: "Тема 1",
-                        themeID: 4,
-                        difficuilty: 4
-                    },
-                    {
-                        name: "Тема 1",
-                        themeID: 5,
-                        difficuilty: 5
-                    },
-                    {
-                        name: "Тема 2",
-                        themeID: 6,
-                        difficuilty: 1
-                    },
-                    {
-                        name: "Тема 2",
-                        themeID: 7,
-                        difficuilty: 2
-                    },
-                    {
-                        name: "Тема 2",
-                        themeID: 8,
-                        difficuilty: 3
-                    },
-                    {
-                        name: "Тема 2",
-                        themeID: 9,
-                        difficuilty: 4
-                    },
-                    {
-                        name: "Тема 2",
-                        themeID: 10,
-                        difficuilty: 6
-                    },
-                ],
-            },
-            edit : false
-        }
-    },
     components: {
         editCourseGroup
     },
-    mounted () {
-        var elems = document.querySelectorAll('.material-tooltip');
-        elems.forEach((el) => {
-            el.parentElement.removeChild(el);
-        })
-        M.AutoInit();
-    },
-    methods: {
-        modalClick (e) {
-            var element = document.querySelector('.editWrapper');
-            var element1 = document.querySelector('.newGroupSearch');
-            console.log(e.target)
-             if (e.target !== element && !element.contains(e.target)) {
-                this.edit = false
-            }
-        },
-        getDifficuiltyName(level) {
+    setup() {
+        const course = {
+            courseID: 1,
+            courseName: "Основы программирования на языке C++",
+            courseDescription: "Это курс по c++",
+            courseThemes:
+            [
+                {
+                    name: "Тема 1",
+                    themeID: 1,
+                    difficuilty: 1
+                },
+                {
+                    name: "Тема 1",
+                    themeID: 2,
+                    difficuilty: 2
+                },
+                {
+                    name: "Тема 1",
+                    themeID: 3,
+                    difficuilty: 3
+                },
+                {
+                    name: "Тема 1",
+                    themeID: 4,
+                    difficuilty: 4
+                },
+                {
+                    name: "Тема 1",
+                    themeID: 5,
+                    difficuilty: 5
+                },
+                {
+                    name: "Тема 2",
+                    themeID: 6,
+                    difficuilty: 1
+                },
+                {
+                    name: "Тема 2",
+                    themeID: 7,
+                    difficuilty: 2
+                },
+                {
+                    name: "Тема 2",
+                    themeID: 8,
+                    difficuilty: 3
+                },
+                {
+                    name: "Тема 2",
+                    themeID: 9,
+                    difficuilty: 4
+                },
+                {
+                    name: "Тема 2",
+                    themeID: 10,
+                    difficuilty: 6
+                },
+            ]
+        }
+
+        const edit = ref(false)
+
+        const getDifficuiltyName = (level) => {
             if(level === 1) return "новичок"
             if(level === 2) return "стажер"
             if(level === 3) return "мастер"
             if(level === 4) return "профессионал"
             if(level === 5) return "эксперт"
-        },
-        saveChanges() {
+        }
+
+        const saveChanges = () => {
 
         }
-    }
 
+        const onCloseGroupModal = () => {
+            edit.value = false;
+        }
+
+        onMounted(() => {
+            var elems = document.querySelectorAll('.material-tooltip');
+            elems.forEach((el) => {
+                el.parentElement.removeChild(el);
+            })
+            M.AutoInit();
+        })
+
+        return {
+            course,
+            edit,
+            getDifficuiltyName,
+            saveChanges,
+            onCloseGroupModal
+        }
+    }
 }
 </script>
 

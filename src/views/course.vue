@@ -24,21 +24,8 @@ export default {
     components:{
         sidebar, header, themeContent
     },
-    data() {
-        return {
-            themes: [
-                { name: 'Глава 1. Введение в С++' , key: 1},
-                { name: 'Глава 1. Введение в С++' , key: 2},
-                { name: 'Глава 1. Введение в С++' , key: 3},
-                { name: 'Глава 1. Введение в С++' , key: 4},
-                { name: 'Глава 1. Введение в С++' , key: 5},
-                { name: 'Глава 1. Введение в С++' , key: 6},
-                { name: 'Глава 1. Введение в С++' , key: 7},
-                { name: 'Глава 1. Введение в С++' , key: 8},
-                { name: 'Глава 1. Введение в С++' , key: 9},
-                { name: 'Глава 1. Введение в С++' , key: 10}
-            ],
-        }
+    setup() {
+        return {}
     }
 }
 </script>

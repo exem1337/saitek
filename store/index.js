@@ -17,12 +17,10 @@ export default createStore ({
         login(state) {
             state.logged = true
             state.userType = 2
-            console.log("login")
         },
         logout(state) {
             state.userType = 0
             state.logged = false
-            console.log("logout")
         }
     }
 

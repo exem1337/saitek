@@ -30,24 +30,35 @@
 </template>
 
 <script>
+import { ref } from 'vue'
 export default {
-    data () {
-        return {
-            groupList: [
-                { key: 1, name: '19ИВТ(б)ПОВТ' },
-                { key: 2, name: '19ИВТ(б)ВМК' },
-                { key: 3, name: '19ИСТ(б)ОП' },
-                { key: 4, name: '19ИВТ(а)САУВТ' },
-                { key: 5, name: '19МКН(б)АПКМ' }
-            ],
-            searchGroups: false,
-            editGroups: true
+    emits: ['onCloseGroupModal'],
+    setup(props, {emit}) {
+        const groupList = [
+            { key: 1, name: '19ИВТ(б)ПОВТ' },
+            { key: 2, name: '19ИВТ(б)ВМК' },
+            { key: 3, name: '19ИСТ(б)ОП' },
+            { key: 4, name: '19ИВТ(а)САУВТ' },
+            { key: 5, name: '19МКН(б)АПКМ' }
+        ]
+
+        const searchGroups = ref(false);
+        const editGroups = ref(true);
+
+        const editSave = () => {
+            emit('onCloseGroupModal')
         }
-    },
-    methods : {
-        closeSearch() {
-            this.searchGroups = false;
-            this.editGroups = true;
+
+        const closeSearch = () => {
+            searchGroups.value = false;
+            editGroups.value = true;
+        }
+        return {
+            groupList,
+            searchGroups,
+            editGroups,
+            closeSearch,
+            editSave
         }
     }
 }

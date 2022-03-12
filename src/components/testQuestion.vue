@@ -34,6 +34,7 @@ export default {
   },
   setup(props, { emit }) {
     let answer = ref();
+
     const getAnswer = () => {
       if (answer.value == 0 || answer.value == 1)
         emit("onAnswer", answer.value);

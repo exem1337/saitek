@@ -20,14 +20,18 @@
 </template>
 
 <script>
+import { onMounted } from '@vue/runtime-core';
 export default {
-    data(){
-        return{
-            courses: ['Основы программирования на языке C++', 'Основы теории управления', 'Базы данных']
+    setup() {
+        const courses = ['Основы программирования на языке C++', 'Основы теории управления', 'Базы данных']
+
+        onMounted(() => {
+            M.AutoInit();
+        })
+
+        return {
+            courses
         }
-    },
-    mounted(){
-        M.AutoInit();
     }
 }
 </script>

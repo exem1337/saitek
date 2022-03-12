@@ -7,7 +7,7 @@
               <a v-if="$store.state.logged" href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
               <ul class="right hide-on-med-and-down"  style="position: relative; z-index: 3;">
                 <li v-if="$store.state.logged" ><router-link to="/profile" class="da big-font">Личный кабинет</router-link></li>
-                <li v-if="$store.state.logged"><router-link to="courses" class="da big-font">Курсы</router-link></li>
+                <li v-if="$store.state.logged"><router-link to="courses" class="da big-font">Дисциплины</router-link></li>
                 <!-- <li v-if="$store.state.logged" ><router-link to="/profile" class="da">Оценочные материалы</router-link></li> -->
                 <li v-if="$store.state.userType === 2" class="da settings big-font" style="padding: 0 15px; cursor: pointer;">Экспертная система
                   <div class="edit-inner">
