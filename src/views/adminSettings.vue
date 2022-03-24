@@ -48,6 +48,7 @@ export default {
 
 .non-active-tab {
     filter: brightness(95%);
+    z-index: 1 !important;
 }
 
 .headText{
@@ -57,7 +58,8 @@ export default {
 .headText-right{
     position: absolute;
     top: -93px;
-    right: 0;
+    left: 490px;
+    z-index: 2 !important;
 }
 
 .editor{
@@ -135,9 +137,9 @@ export default {
     h4{
         margin: 0;
     }
-    &:hover{
-        transform: scale(101%);
-    }
+    // &:hover{
+    //     transform: scale(101%);
+    // }
     background-color: lighten(#2f79ee, 40%);
 }
 

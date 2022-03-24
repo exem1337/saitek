@@ -137,5 +137,11 @@ export default {
   }
 }
 
+.big-font{
+  font-size: 1.5em;
+}
 
+.btn {
+  font-size: .75em;
+}
 </style>

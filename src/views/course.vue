@@ -3,7 +3,7 @@
         <sidebar/>
         <div class="content flow-text">
             <div class="theme-name spotlight z-depth-2">
-                <p class="white-text">Дисциплина: Основы программирования на языке C++ <br> Тема: Тема 1 - Введение в C++</p>
+                <p class="white-text">Дисциплина: Основы программирования на языке C++ <br> Тема 1 - Введение в C++</p>
                 <!-- <ul class="pagination">
                     <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
                     <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>

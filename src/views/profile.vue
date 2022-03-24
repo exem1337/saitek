@@ -5,7 +5,7 @@
       <div class="image-wrapper">
         <img
           class="avatar"
-          src="https://11m1a41kw68b2skba3uj53p1-wpengine.netdna-ssl.com/wp-content/uploads/2019/04/avatar-male.jpg"
+          src="avatar.jpg"
         />
         <img
           class="img-top"
@@ -37,7 +37,7 @@
           </p>
         </div>
       </div>
-      <i class="material-icons cardIcon id">perm_identity</i>
+      <!-- <i class="material-icons cardIcon id">perm_identity</i> -->
     </div>
 
     <div class="card horizontal rulesContainer z-depth-3">
@@ -188,6 +188,7 @@ ul:last-child > li > .discipline {
     margin: 0;
   }
   background-color: lighten(#2f79ee, 20%);
+
 }
 
 .bar {
