@@ -5,16 +5,19 @@
   <router-view></router-view>
    <!-- </transition> -->
   <!-- <i class="material-icons bgicon icon1">filter_none</i> -->
+  <Chart/>
 </template>
 
 <script>
+
 import 'materialize-css'
 import AppHeader from '@/components/headerNav'
 import Auth from '@/views/auth'
+import Chart from "@/components/chart";
 export default {
   name: 'App',
   components: {
-    AppHeader, Auth
+    AppHeader, Auth, Chart
   },
   data() {
     return {
