@@ -16,13 +16,13 @@
       <div class="profile-content">
         <div class="profile-content-inner">
           <p class="userName flow-text">
-            Фамилия: <span class="data">{{ this.user.surname }}</span>
-          </p>
-          <p class="userName flow-text">
             Имя: <span class="data">{{ this.user.name }}</span>
           </p>
           <p class="userName flow-text">
             Отчество: <span class="data">{{ this.user.patronim }}</span>
+          </p>
+          <p class="userName flow-text">
+            Фамилия: <span class="data">{{ this.user.surname }}</span>
           </p>
         </div>
         <div class="profile-content-inner">
@@ -156,7 +156,7 @@ ul:last-child > li > .discipline {
   position: relative;
   z-index: 2;
   transition: 0.3s ease;
-  background-color: #2f79ee;
+  background-color: lighten(#2f79ee, 20%);
   &:hover {
     transform: scale(101%);
   }
@@ -187,16 +187,18 @@ ul:last-child > li > .discipline {
   h4 {
     margin: 0;
   }
-  background-color: lighten(#2f79ee, 20%);
+  background-color: lighten(#2f79ee, 10%);
 
 }
 
 .bar {
-  background-color: darken(#2f79ee, 15%);
+  background-color:#2f79ee;
+  // background-color: darken(#2f79ee, 15%);
 }
 
 .progress {
-  background-color: lighten(#2acc72, 20%);
+  background-color: #fff;
+  // background-color: lighten(#2acc72, 20%);
 }
 
 .avatar {

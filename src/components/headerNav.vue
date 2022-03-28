@@ -62,8 +62,18 @@
           </li>
           <li v-if="$store.state.logged">
             <div class="person-info" style="padding: 0 15px; cursor: pointer">
-              <span class="big-font white-text">Владимир Е.</span>
-              <img class="avatar" src="avatar.jpg" alt="" />
+              <p
+                class="big-font white-text"
+                style="transform: translateY(-22px)"
+              >
+                Владимир Е.
+              </p>
+              <img
+                class="avatar"
+                style="transform: translateY(-22px)"
+                src="avatar.jpg"
+                alt=""
+              />
 
               <div class="person-info-content">
                 <span class="white-text">Статус: профессионал</span>

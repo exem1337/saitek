@@ -14,6 +14,7 @@ import about from "../src/views/about";
 import test from "../src/views/testTemplate";
 import mamdaniForm from "../src/views/mamdaniForm";
 import testTemplate from "../src/views/testTemplate";
+import editThemeTest from "../src/views/editThemeTest";
 const routes = [
   {
     path: "/test",
@@ -79,6 +80,11 @@ const routes = [
     name: "testTemplate",
     component: test,
   },
+  {
+    path: "/testEdit",
+    name: "testEdit",
+    component: editThemeTest
+  }
 ];
 
 const router = createRouter({
