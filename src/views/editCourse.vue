@@ -4,7 +4,7 @@
       Редактирование курса
     </h3>
     <div class="card horizontal edit" style="padding: 15px">
-      <form style="width: 100%">
+      <div style="width: 100%">
         <div class="row" style="margin-bottom: 0">
           <div class="input-field col s12 m12 l6">
             <i class="material-icons prefix">mode_edit</i>
@@ -39,7 +39,7 @@
           ><i class="material-icons left">group_add</i>Редактор групп</a
         >
         <button
-          @submit.prevent="saveChanges"
+          @click="onAddTheme"
           class="waves-effect waves-light btn"
           style="background-color: #2f79ee; margin-left: 15px"
         >
@@ -52,7 +52,7 @@
                 class="card-content grey-text text-darken-2"
                 style="font-weight: 600"
               >
-                <span class="card-title" style="font-weight: 600"
+                <span class="card-title grey-text text-darken-2" style="font-weight: 600"
                   >{{ theme.name }} Сложность:
                   {{ getDifficuiltyName(theme.difficuilty) }}</span
                 >
@@ -65,7 +65,7 @@
                     v-if="
                       $store.state.userType === 2 || $store.state.userType === 1
                     "
-                    class="material-icons edit-icon tooltipped"
+                    class="material-icons edit-icon tooltipped grey-text text-darken-2"
                     data-position="top"
                     data-tooltip="Оценки"
                     >person</i
@@ -76,18 +76,18 @@
                     v-if="
                       $store.state.userType === 2 || $store.state.userType === 1
                     "
-                    class="material-icons stats-icon tooltipped"
+                    class="material-icons stats-icon tooltipped grey-text text-darken-2"
                     data-position="top"
                     data-tooltip="Редактировать тему"
                     >edit</i
                   ></router-link
                 >
-                <router-link to="/courseEdit"
+                <router-link to="/testEdit"
                   ><i
                     v-if="
                       $store.state.userType === 2 || $store.state.userType === 1
                     "
-                    class="material-icons test-icon tooltipped"
+                    class="material-icons test-icon tooltipped grey-text text-darken-2"
                     data-position="top"
                     data-tooltip="Редактировать тест"
                     >event_note</i
@@ -97,7 +97,7 @@
             </div>
           </li>
         </ul>
-      </form>
+      </div>
     </div>
   </div>
   <div v-if="this.edit" class="editor" @click="modalClick">
@@ -181,7 +181,7 @@ export default {
 
     const edit = ref(false);
 
-    const isAddingTheme = ref(true);
+    const isAddingTheme = ref(false);
 
     const getDifficuiltyName = (level) => {
       if (level === 1) return "новичок";
@@ -201,6 +201,10 @@ export default {
         isAddingTheme.value = false;
     }
 
+    const onAddTheme = () => {
+      isAddingTheme.value = true;
+    }
+
     onMounted(() => {
       var elems = document.querySelectorAll(".material-tooltip");
       elems.forEach((el) => {
@@ -216,7 +220,8 @@ export default {
       saveChanges,
       onCloseGroupModal,
       isAddingTheme,
-      onCloseAddThemeModal
+      onCloseAddThemeModal,
+      onAddTheme
     };
   },
 };
@@ -284,4 +289,6 @@ textarea:focus {
   backdrop-filter: blur(5px);
   overflow: hidden;
 }
+
+
 </style>

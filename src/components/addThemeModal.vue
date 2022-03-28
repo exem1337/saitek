@@ -29,6 +29,16 @@
               <!-- <label for="course_description">Описание курса</label> -->
             </div>
           </div>
+          <div class="input-field combobox" style="transform: translateY(-25px)">
+            <select class="browser-default" v-model="result">
+              <option value="новичок">новичок</option>
+              <option value="стажер">стажер</option>
+              <option value="мастер">мастер</option>
+              <option value="профессионал">профессионал</option>
+              <option value="эксперт">эксперт</option>
+            </select>
+            <label class="transformLabel">Сложность темы</label>
+          </div>
           <button
             class="waves-effect waves-light btn"
             style="background-color: #2f79ee"
@@ -52,7 +62,7 @@
 export default {
   props: ["editMode"],
   emits: ["onSave"],
-  setup(props, {emit}) {
+  setup(props, { emit }) {
     const course = {
       courseID: 1,
       courseName: "Основы программирования на языке C++",
@@ -60,18 +70,27 @@ export default {
     };
 
     const onSave = () => {
-        emit('onSave');
-    }
+      emit("onSave");
+    };
 
     return {
       course,
-      onSave
+      onSave,
     };
   },
 };
 </script>
 
 <style lang="scss" scoped>
+.combobox {
+  max-width: 250px;
+  margin-left: 50px;
+}
+
+.transformLabel {
+  transform: translate(260px, 10px);
+}
+
 .add-theme {
   width: 100%;
   height: 100%;
