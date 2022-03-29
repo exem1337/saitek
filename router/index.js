@@ -15,7 +15,18 @@ import test from "../src/views/testTemplate";
 import mamdaniForm from "../src/views/mamdaniForm";
 import testTemplate from "../src/views/testTemplate";
 import editThemeTest from "../src/views/editThemeTest";
+import studentModel from '../src/views/studentModel';
+
 const routes = [
+  {
+    path: "/:catchAll(.*)",
+    component: notFound,
+  },
+  {
+    path: "/studentModel",
+    name: "studentModel",
+    component: studentModel,
+  },
   {
     path: "/test",
     name: "test",
@@ -30,10 +41,6 @@ const routes = [
     path: "/",
     name: "Auth",
     component: Auth,
-  },
-  {
-    path: "/:catchAll(.*)",
-    component: notFound,
   },
   {
     path: "/course",
@@ -91,5 +98,13 @@ const router = createRouter({
   history: createWebHistory(),
   routes,
 });
+
+router.beforeEach((from, to) => {
+  var elems = document.querySelectorAll(".material-tooltip");
+  elems.forEach((el) => {
+    el.parentElement.removeChild(el);
+  });
+  M.AutoInit();
+})
 
 export default router;

@@ -6,13 +6,13 @@
         class="brand-logo hide-on-med-and-down"
         style="margin: 0; padding: 0"
       >
-        Интеллектуальная Обучающая Система
+        Адаптивная Обучающая Система
       </p>
       <div class="nav-wrapper da">
         <a
           href="#!"
           class="brand-logo white-text text-darken-4 hide-on-large-only"
-          >ИОС</a
+          >АОС</a
         >
         <a
           v-if="$store.state.logged"
@@ -25,7 +25,11 @@
           class="right hide-on-med-and-down"
           style="position: relative; z-index: 3"
         >
-          <li v-if="$store.state.logged"></li>
+          <li v-if="$store.state.logged">
+            <router-link to="/profile" class="da big-font"
+              >Личный кабинет</router-link
+            >
+          </li>
           <li v-if="$store.state.logged">
             <router-link to="courses" class="da big-font"
               >Дисциплины</router-link
@@ -40,9 +44,16 @@
             Экспертная система
             <div class="edit-inner">
               <router-link
-                to="/adminSettings"
+                to="/studentModel"
                 class="settingsItem big-font"
                 style="border-radius: 10px 10px 0px 0px"
+              >
+                Модель студента
+              </router-link>
+              <router-link
+                to="/adminSettings"
+                class="settingsItem big-font"
+                style="border-radius: 0px 0px 0px 0px"
               >
                 Редактор базы правил
               </router-link>
@@ -60,34 +71,16 @@
               </router-link>
             </div>
           </li>
-          <li v-if="$store.state.logged">
-            <div class="person-info" style="padding: 0 15px; cursor: pointer">
-              <p
-                class="big-font white-text"
-                style="transform: translateY(-22px)"
-              >
-                Владимир Е.
-              </p>
-              <img
-                class="avatar"
-                style="transform: translateY(-22px)"
-                src="avatar.jpg"
-                alt=""
-              />
-
-              <div class="person-info-content">
-                <span class="white-text">Статус: профессионал</span>
-                <router-link to="/profile" class="da"
-                  >Личный кабинет</router-link
-                >
-                <router-link to="/" @click="logout" class="da"
-                  >Выход</router-link
-                >
-              </div>
-            </div>
+          <li>
+            <router-link to="/" @click="logout" class="da big-font"
+              >Выход</router-link
+            >
           </li>
           <li>
             <router-link to="/about" class="da big-font">Справка</router-link>
+          </li>
+          <li class="big-font" style="padding-left: 15px;">
+            {{ $store.state.userType === 0 ? "Вы вошли как студент" : "Вы вошли как эксперт" }}
           </li>
         </ul>
       </div>

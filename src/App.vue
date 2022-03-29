@@ -5,7 +5,7 @@
   <router-view></router-view>
    <!-- </transition> -->
   <!-- <i class="material-icons bgicon icon1">filter_none</i> -->
-  <Chart/>
+  <!-- <Chart/> -->
 </template>
 
 <script>
@@ -28,6 +28,12 @@ export default {
 
 
 <style lang="scss">
+  .flex-wrapper {
+    display: flex;
+    justify-content: space-between;
+    
+  }
+
   .fixed-right-bottom {
     position: fixed;
     bottom: 25px;
