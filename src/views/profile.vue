@@ -70,9 +70,13 @@
         class="white-text text-darken-2"
         style="font-weight: 500; font-size: 3em"
       >
-        Статистика по дисциплинам
+        {{
+          $store.state.userType === 0
+            ? "Статистика по дисциплинам"
+            : "Выборка статистики"
+        }}
       </h4>
-      <ul>
+      <ul v-if="$store.state.userType === 0">
         <li
           v-for="stat in this.stats"
           :key="stat.key"
@@ -101,7 +105,23 @@
         </li>
       </ul>
 
-      <!-- <i class="material-icons cardIcon">fingerprint</i> -->
+      <div v-else class="stats-wrapper">
+        <div class="input-field">
+          <select v-model="disciplineInputValue" class="browser-default">
+            <option value="" disabled selected>Дисциплина</option>
+            <option v-for="(disc, key) in stats" :key="key" value="">{{disc.discName}}</option>
+          </select>
+        </div>
+        <div class="input-field">
+          <select v-model="groupInputValue" class="browser-default">
+            <option value="" disabled selected>Группа</option>
+            <option value="1">19ИВТ(б)-ПОВТ</option>
+            <option value="2">19ИВТ(б)-ВМК</option>
+            <option value="3">19ПИНЖ(б)</option>
+          </select>
+        </div>
+        <button @click="getStats" class="blue btn">Получить статистику</button>
+      </div>
     </div>
   </div>
 </template>
@@ -150,11 +170,24 @@ export default {
     ];
 
     const activeTab = ref(0);
+    const isShowTableStats = ref(false);
+    const groupInputValue = ref("");
+    const disciplineInputValue = ref("");
+
+    const getStats = () => {
+      if(groupInputValue.value !== "" && disciplineInputValue.value !== "") {
+        isShowTableStats.value = true;
+      }
+      else M.toast({html: "Выберите дисциплину и группу"});
+    }
 
     return {
       stats,
       user,
       activeTab,
+      getStats,
+      groupInputValue,
+      disciplineInputValue
     };
   },
 };

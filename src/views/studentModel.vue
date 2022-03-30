@@ -45,7 +45,7 @@
               type="text"
               class="validate"
             />
-            <label for="term_name">Название термы</label>
+            <label for="term_name">Название терма</label>
           </div>
           <div class="input-field">
             <input
